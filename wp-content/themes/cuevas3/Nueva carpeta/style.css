@@ -1,0 +1,54 @@
+/*  
+Theme Name: Simple La Bob
+Theme URI: http://www.blogohblog.com/
+Description: Simple eh? This theme was designed and built by Bob of <a href="http://www.blogohblog.com/">Blog Oh Blog</a> based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>. I love to hear of my work being used :). This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution 3.0 License</a>. This means you may use it for any purpose, and make any changes you like. Just leave my Bob link under your footer.
+Version: 1.0
+Author: Bob 
+Author URI: http://www.blogohblog.com/
+*/
+
+* {margin: 0; padding: 0;}	
+form {margin: 0; padding: 0;}
+h1 {font-size: 19px; color: #858383;}
+h2 {font-size: 16px; line-height: 20px; color: #00749E;}
+.h2 {font-family: Arial, Helvetica, sans-serif; line-height: 18px; font-size: 12px; color: #312E2E; font-weight: bold;}
+h3 {font-size: 15px; color: #656565;}
+html, body {background: #fff url(images/headerbg.gif) repeat-x left top; margin: 0px; padding: 0px; text-align: center;}
+body, tr, td {font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+a:link,a:visited,a:active {color:#00749E; text-decoration: none;}
+a:hover	{color:#000000; text-decoration: underline;}
+#wrap {width: 980px; border-right: 0px solid #ccc; text-align: left; vertical-align: middle; margin: 0px auto; padding: 0px;}
+#header {width: 980px; height: 90px; text-align: right; margin: 0px auto;padding: 0px;}
+#logo {float: left; width: 600px; margin-top: 20px;} 
+#logo h1 { text-indent: -10000px; padding: 0px; margin: 0px; } 
+#logo h1 a { display: block; background: url(images/logo.gif) no-repeat; height: 53px;}
+#middle {clear: both; width: 980px; margin-top: 13px;}
+#right {float: right; width: 234px;}
+#left {float: left; width: 728px;}
+.entry {width: 728px; border: 1px solid #dadada; background: #fff url(images/entry.gif) repeat-x left top; margin-bottom: 10px;}
+.entry p {font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; color: #000000; padding: 10px 15px 10px 15px;}
+.entry h2 { font-family: Arial, Helvetica, sans-serif; line-height: 18px; font-size: 16px; color: #898585; font-weight: bold; padding: 10px 10px 0 10px;}
+.entry li {margin-left: 25px;}
+#sidebar { background: #fff; width: 212px; border: 1px solid #dadada; margin-bottom: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; color: #000000; padding: 10px; }
+#sidebar h2 { font-size: 14px; padding: 3px 0px; margin: 0px 7px 3px 7px; border-bottom: dashed 1px #ccc;}
+#sidebar ul { list-style-type: none; margin: 0 ; padding: 0; }
+#sidebar ul li { list-style-type: none; margin: 0 0 10px 0; padding: 0; }
+#sidebar ul li ul { list-style-type: square; margin: 0px; padding: 0 3px; }
+#sidebar ul li ul li { list-style-type:none;  background: transparent url(images/bullet.gif) no-repeat 0 4px; padding: 0px 0px 2px 14px; border: 0; margin: 0;  }
+.alignright { float: right; }
+.alignleft { float: left; }
+blockquote { margin: 15px 30px 0 10px; padding-left: 20px; border-left: 5px solid #ddd; }
+blockquote cite { margin: 5px 0 0; display: block; }
+.comments h3 { font-size: 14px; padding: 3px 0px; margin: 0px 7px 3px 7px; border-bottom: dashed 1px #ccc;}
+.gcomment { border-left: none; vertical-align:middle; border-right:none; margin-bottom:3px; border-bottom: 1px solid #f3f3f3; padding:3px; background-color:#F7F7F7; }
+.ucomment { border-left: none; border-right:none; margin-bottom:3px; border-bottom: 1px solid #f3f3f3; padding:3px; background-color:#fbfbf1; }
+ol.commentlist { padding: 0; margin: 0 0 1px; }
+ol.commentlist li { list-style: none; margin: 0; padding: 13px 13px 1px; }
+ol.commentlist li.commenthead { list-style: none; margin: 0; }
+ol.commentlist li.commenthead h2 { margin: 0;}
+#footerbox { clear:both; background: #FFF url(images/footerbg.gif) repeat-x left top; width: 100%; background-color: #312E2E; margin: 0px auto; text-align: center;}
+#footerpad { clear:both; width: 980px; padding-top: 5px; margin: 0px auto; text-align: left;}
+#footer { clear:both; width: 980px; padding: 20px 0px 5px 0px;}
+#footer p { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #8E8C8C;}
+#footer a:link, #footer a:active, #footer a:visited { color: #C3C2C2; text-decoration: none;}
+#footer a:hover { color: #00749E; text-decoration: underline;}
