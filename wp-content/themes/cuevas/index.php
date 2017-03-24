@@ -652,29 +652,13 @@ get_header(); ?>
 				</div>
 			</div>			
 			<div class="col s12 l10 offset-l1 center-align">
-				<form action="" method="post">
-					<div class="col s12 m8 offset-m2 l4">
-						<input type="text" name="nombre" placeholder="Nombre" class="campos-cont" required>
-					</div>
-					<div class="col s12  m8 offset-m2 l4">
-						<input type="text" name="email" placeholder="E-mail" class="campos-cont" required>
-					</div>
-					<div class="col s12  m8 offset-m2 l4">
-						<input type="text" name="telefono" placeholder="Teléfono" class="campos-cont" required>
-					</div>
-					<div class="col s12  m8 offset-m2 l12">
-						<textarea type="text" name="mensaje" placeholder="Mensaje" class="textArea" required></textarea>
-					</div>
-					<div class="col s4 offset-s4 m4 offset-m4 l6 offset-l3">
-						<input type="submit" value="Enviar" class="btn btn-contacto">
-					</div>
-				</form>
+				<?php echo do_shortcode('[contact-form-7 id="33" title="Contacto"]'); ?>
 				<div class="col s12 m8 offset-m2 l6 offset-l3">
 					<div class="col s2 l2">
 						<i class="fa fa-building-o img-contato" aria-hidden="true"></i>
 					</div>
-					<div class="col s10 l10 div-sinpadding">
-						<p class="info-contacto"> Hidalgo 77, san lucas tepetlacalco, 54055 tlalnepantla, edo. méx.</p>
+					<div class="col s10 l10 div-sinpadding">					
+						<p class="info-contacto"><?php echo get_field("direccion", 35); ?></p>
 					</div>
 					<div class="col s2 l2">
 						<i class="fa fa-phone img-contato-telefono" aria-hidden="true"></i>
@@ -682,20 +666,20 @@ get_header(); ?>
 					<div class="col s10 l10 div-sinpadding">
 						<div class="col s6 m6 l6 div-sinpadding">
 							<p class="info-contacto sinmargen-telefono-div font-conta">
-								<a href="tel:015553650323" style=" color:#666666;">0155-5365- 0323</a><br>
-								<a href="tel:015553651505" style=" color:#666666;">0155-5365- 1505</a></p>
+							<a href="tel:<?php echo get_field("telefono1", 35); ?>" style=" color:#666666;"><?php echo get_field("telefono1", 35); ?></a><br>
+							<a href="tel:<?php echo get_field("telefono2", 35); ?>" style=" color:#666666;"><?php echo get_field("telefono2", 35); ?></a></p>
 						</div>
 						<div class="col s6 m6 l6 div-sinpadding">
 							<p class="info-contacto sinmargen-telefono-div">
-							<a href="tel:015553651506" style=" color:#666666;">0155-5365- 1506</a><br>
-							<a href="tel:015553651507" style=" color:#666666;">0155-5365- 1507</p>
+							<a href="tel:<?php echo get_field("telefono3", 35); ?>" style=" color:#666666;"><?php echo get_field("telefono3", 35); ?></a><br>
+							<a href="tel:<?php echo get_field("telefono4", 35); ?>" style=" color:#666666;"><?php echo get_field("telefono4", 35); ?></p>
 						</div>
 					</div>
 					<div class="col s2 l2">
 						<i class="fa fa-envelope img-contacto2" aria-hidden="true"></i>
 					</div>
 					<div class="col s10 l10 info-contacto nopadding">
-						<p class="info-contacto minuscula"><a href="mailto:contacto@ingenieroscuevas.com.mx"></a>contacto@ingenieroscuevas .com.mx</p>
+						<p class="info-contacto minuscula"><a href="mailto:<?php echo get_field("correo", 35); ?>"></a><?php echo get_field("correo", 35); ?></p>
 					</div>
 				</div>
 				<div class="col s12 m12 l12 margin50">
