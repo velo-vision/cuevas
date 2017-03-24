@@ -1,17 +1,17 @@
 	//menu stick
-		$(document).ready(function(){		
-			$(".menu").hide();
+		$(document).ready(function(){
+			$(".menu1").hide();
 
 		$(window).on('scroll', function(){
 			var altura = $('#empresa').offset().top;
 			if ( $(window).scrollTop() > altura ){
-				$('.menu').addClass('menu-fixed');
+				$('.menu1').addClass('menu-fixed');
 
 		//con efecto y duracion
-		$( ".menu" ).show( "blind", 200 );
+		$( ".menu1" ).show( "blind", 200 );
 			}else{
-				$('.menu').removeClass('menu-fixed');
-					$(".menu").hide();
+				$('.menu1').removeClass('menu-fixed');
+					$(".menu1").hide();
 				}
 			});
 		});
@@ -35,9 +35,9 @@
 	 	$(".button-collapse").sideNav();
 	 });
 	 /**/
-	//slider materealize geo			
+	//slider materealize geo
 	$(document).ready(function(){
-		$('.slider').slider({full_width: true});		
+		$('.slider').slider({full_width: true});
 	});
 	//slider obra civil
 
@@ -88,16 +88,16 @@
 
 	/** fancybox*/
 		$(document).ready(function() {
-			$('.fancybox').fancybox();				
+			$('.fancybox').fancybox();
 			});
 
 	/***scrooll**/
 	(function($){
-		$(window).on("load",function(){				
+		$(window).on("load",function(){
 			$.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
-			$.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default				
+			$.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
 			$("#content-l").mCustomScrollbar();
-			
+
 			});
 	})
 	(jQuery);
@@ -145,9 +145,7 @@
 
 				divT = document.getElementById("tres");
 				divT.style.display = "inline";
-			}		
+			}
 		});
 
 	});
-
-		

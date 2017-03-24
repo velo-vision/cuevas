@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">     
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- cueva -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/fancybox.css" media="screen" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/CustomScrollbar.css">    
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/CustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/oka_slider_model.css">
-    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />    
+    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
    </head>
    <body>
    <section class="fondo-home" id="inicio">
     <div class="row" >
-      <div class="row nomargin">            
+      <div class="row nomargin">
         <nav class="menu-fijo">
           <div class="row nomargin">
             <div class="col s12 m12 l12">
@@ -28,14 +28,14 @@
               </div>
               <div class="col l10">
                 <div class="col s12 l12 hide-on-small-only hide-on-med-only">
-                  <p class="font-home">                 
+                  <p class="font-home">
                      Teléfono:
                      <a href="tel:015553650323" class="telfono-contacto">0155-5365-0323</a>,
                      <a href="tel:015553651505" class="telfono-contacto"> 0155-5365-1505</a>,
                      <a href="tel:015553651506" class="telfono-contacto"> 0155-5365-1506</a>,
                      <a href="tel:015553651507" class="telfono-contacto"> 0155-5365-1507</a>
                   </p>
-                </div>          
+                </div>
                 <div class="col s12 l3 center-align hide">
                   <a href="#"><i class="fa fa-facebook blanco margin-sep" aria-hidden="true"></i></a>
                   <a href="#"><i class="fa fa-twitter blanco margin-sep" aria-hidden="true"></i></a>
@@ -47,7 +47,7 @@
                   <img class="hide-on-large-only size-logo-menu-dos" src="<?php bloginfo('template_url'); ?>/images/home/ex.png"></a>
                 </div>
                 <div class="nav-wrapper color-menu">
-                  <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
+                  <!-- <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down collapse menu-transparent lista">
                       <li><a href="#inicio"><p class="font-home display-menu">INICIO</p></a></li>
                       <li><a href="#empresa"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
@@ -65,15 +65,16 @@
                       <li><a href="#obra-civil" class="nopadding"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
                       <li><a href="#referencias" class="nopadding"><p class="font-home display-menu">REFERENCIAS</p></a></li>
                       <li><a href="#contacto" class="nopadding"><p class="font-home display-menu">CONTACTO</p></a></li>
-                    </ul>
-                </div>                           
-              </div>                        
-            </div>      
-          </div>                
-        </nav>                 
+                    </ul> -->
+                    <?php wp_nav_menu('menu'); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
         <!--menu fixed-->
-      <nav class="navbar-fixed menu" style="display: none;">
+      <nav class="navbar-fixed menu1" style="display: none;">
         <div class="row nomargin">
           <div class="col s12 m12 l12">
             <div class="col l2">
@@ -87,7 +88,7 @@
                   <a href="tel:015553651506" class="telfono-contacto"> 0155-5365-1506</a>,
                   <a href="tel:015553651507" class="telfono-contacto"> 0155-5365-1507</a>
                 </p>
-              </div>          
+              </div>
               <div class="col s12 l3 center-align hide">
                 <a href="#"><i class="fa fa-facebook blanco margin-sep" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter blanco margin-sep" aria-hidden="true"></i></a>
@@ -98,7 +99,7 @@
                 <img class="hide-on-large-only size-logo-menu-dos" src="<?php bloginfo('template_url'); ?>/images/home/ex.png"></a>
               </div>
               <div class="nav-wrapper color-menu">
-                <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
+                <!-- <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down collapse menu-transparent lista">
                   <li><a href="#inicio"><p class="font-home display-menu">INICIO</p></a></li>
                   <li><a href="#empresa"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
@@ -116,10 +117,11 @@
                   <li><a href="#obra-civil" class="nopadding"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
                   <li><a href="#referencias" class="nopadding"><p class="font-home display-menu">REFERENCIAS</p></a></li>
                   <li><a href="#contacto" class="nopadding"><p class="font-home display-menu">CONTACTO</p></a></li>
-                </ul>
-              </div>                                           
-            </div>                        
-          </div>      
-        </div>                
+                </ul> -->
+                <?php wp_nav_menu('menu'); ?>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-          <!--fin-->  
+          <!--fin-->
