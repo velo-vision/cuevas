@@ -30,10 +30,10 @@
                 <div class="col s12 l12 hide-on-small-only hide-on-med-only">
                   <p class="font-home">                 
                      Teléfono:
-                     <a href="tel:015553650323" class="telfono-contacto">0155-5365-0323</a>,
-                     <a href="tel:015553651505" class="telfono-contacto"> 0155-5365-1505</a>,
-                     <a href="tel:015553651506" class="telfono-contacto"> 0155-5365-1506</a>,
-                     <a href="tel:015553651507" class="telfono-contacto"> 0155-5365-1507</a>
+                     <a href="tel:<?php echo get_field("telefono1", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono1", 35); ?></a>,
+                     <a href="tel:<?php echo get_field("telefono2", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono2", 35); ?></a>,
+                     <a href="tel:<?php echo get_field("telefono3", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono3", 35); ?></a>,
+                     <a href="tel:<?php echo get_field("telefono4", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono4", 35); ?></a>
                   </p>
                 </div>          
                 <div class="col s12 l3 center-align hide">
@@ -82,10 +82,10 @@
             <div class="col l10">
               <div class="col s12 l12 hide-on-small-only hide-on-med-only">
                 <p class="font-home">Teléfono:
-                  <a href="tel:015553650323" class="telfono-contacto">0155-5365-0323</a>,
-                  <a href="tel:015553651505" class="telfono-contacto"> 0155-5365-1505</a>,
-                  <a href="tel:015553651506" class="telfono-contacto"> 0155-5365-1506</a>,
-                  <a href="tel:015553651507" class="telfono-contacto"> 0155-5365-1507</a>
+                  <a href="tel:<?php echo get_field("telefono1", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono1", 35); ?></a>,
+                  <a href="tel:<?php echo get_field("telefono2", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono2", 35); ?></a>,
+                  <a href="tel:<?php echo get_field("telefono3", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono3", 35); ?></a>,
+                  <a href="tel:<?php echo get_field("telefono4", 35); ?>" class="telfono-contacto"><?php echo get_field("telefono4", 35); ?></a>
                 </p>
               </div>          
               <div class="col s12 l3 center-align hide">

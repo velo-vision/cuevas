@@ -548,15 +548,21 @@ get_header(); ?>
 		<div class="row nomargin nopadding">			
 			<div class="col s12 m12 l12 fondo-referencias nopadding">
 				<div class="col s12 m6 offset-m3 l4 offset-l4 margen-r center-align">
-					<p class="title-seis">REFERENCIAS</p>
+				    <?php $post = get_post(51); //Donde 200 será la id del post
+						$title = $post->post_title;
+						$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
+	  				  ?>
+					<p class="title-seis"><?php echo  $title; ?></p>
 				</div>
 				<div class="col s12 l6 offset-l3">
 					<p class="contenido-ref">
-						Nuestra experiencia, profesionalismo y conocimiento en cada una de estas áreas <span>nos permite desarrollar eficientemente cualquier proyecto o 
-						construcción,</span> donde se requieran nuestros servicios.
+						<?php echo $contenido; ?>
 					</p>
 				</div>
-				<div class="col s12 m12 l12 sep-img-ref nopadding">	
+				<div class="col s12 m12 l12 sep-img-ref nopadding">				
+
+					<?php echo do_shortcode('[nggallery id="1"]'); ?>
+
 					<div class="col s6 m4 l4 nopadding producto prod-first">
 						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" data-fancybox-group="gallery" title="Parque Toreo: Muro Milan">
 						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;"/>
