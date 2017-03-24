@@ -22,15 +22,13 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--contenido 2 nuestra empresa-->
+
+			<?php// echo do_shortcode('[masterslider id="4"]'); ?>
+
 	<section id="empresa">
 		<div class="row nomargin">
 			<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
 			  <p class="title-dos">GRUPO CUEVAS</p>
-				<?php
-					wp_nav_menu(array(
-						'theme_location' => 'menu_principal'
-					) );
-				 ?>
 			  <P class="bold">"INGENIERO<span class="subrayado-cuavas">S CUEVAS - CONSORC</span>IO EXCOGE"</P>
 				<div class="col s12 m12 l12 nopadding">
 					<img src="<?php bloginfo('template_url'); ?>/images/home/nuestra-empresa.jpg" class="img-nu">
@@ -662,7 +660,7 @@ get_header(); ?>
 					<div class="col s2 l2">
 						<i class="fa fa-building-o img-contato" aria-hidden="true"></i>
 					</div>
-					<div class="col s10 l10 div-sinpadding">					
+					<div class="col s10 l10 div-sinpadding">
 						<p class="info-contacto"><?php echo get_field("direccion", 35); ?></p>
 					</div>
 					<div class="col s2 l2">
