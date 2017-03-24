@@ -117,7 +117,7 @@ $(document).ready(function() {
               animation: google.maps.Animation.DROP,
               map: map,
               title: location[0],
-              icon: "images/mapa/cuevas.png",
+              icon: "wp-content/themes/cuevas/images/mapa/cuevas.png",
               title: 'Grupo Cuevas'
           });
 
