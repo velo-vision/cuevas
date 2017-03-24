@@ -683,20 +683,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col s12 m12 l12 margin50">
-					<form>
-						<div class="col s12 l6">
-							<p class="invitacion">trabaja con nosotros:</p>
-						</div>
-						<div class="col s12 m6 offset-m3 l4" style="margin-bottom: 10px;">
-							<div class="file-field">						      
-						        <p class="cv-contacto"><img src="<?php bloginfo('template_url'); ?>/images/contacto/clip.png" style="margin: -4px 7px 0 0;">AÑADIR CURRICULUM</p>
-						         <input type="file">						      				     
-						    </div>							
-						</div>
-						<div class="col s8 offset-s2 l1">
-							<input type="submit" name="btn3" value="ENVIAR" class="btn btn-cv">
-						</div>
-					</form>						
+					<?php echo do_shortcode('[contact-form-7 id="46" title="Formulario 2"]'); ?>						
 				</div>
 			</div>			
 		</div>
