@@ -18,7 +18,6 @@
    </head>
    <body>
    <section class="fondo-home" id="inicio">
-     
     <div class="row" >
       <div class="row nomargin">
         <nav class="menu-fijo">
@@ -48,13 +47,26 @@
                   <img class="hide-on-large-only size-logo-menu-dos" src="<?php bloginfo('template_url'); ?>/images/home/ex.png"></a>
                 </div>
                 <div class="nav-wrapper color-menu">
-                  <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
+                  <!-- <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down collapse menu-transparent lista">
-                      <li><p class="font-home display-menu style-menu"><?php wp_nav_menu('menu'); ?></p></li>
+                      <li><a href="#inicio"><p class="font-home display-menu">INICIO</p></a></li>
+                      <li><a href="#empresa"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
+                      <li><a href="#geotecnica"><p class="font-home display-menu">GEOTÉCNICA</p></a></li>
+                      <li><a href="#construccion"><p class="font-home display-menu">CONSTRUCCIÓN</p></a></li>
+                      <li><a href="#obra-civil"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
+                      <li><a href="#referencias"><p class="font-home display-menu">REFERENCIAS</p></a></li>
+                      <li><a href="#contacto"><p class="font-home display-menu">CONTACTO</p></a></li>
                     </ul>
                     <ul class="side-nav menu-var-divice lista menu-fijo" id="mobile-demo">
-                      <li><p class="font-home display-menu"><?php wp_nav_menu('menu'); ?></p></li>
-                    </ul>
+                      <li style="margin-top: 50px;"><a href="#inicio" class="nopadding"><p class="font-home display-menu">INICIO</p></a></li>
+                      <li><a href="#empresa" class="nopadding"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
+                      <li><a href="#geotecnica" class="nopadding"><p class="font-home display-menu">GEOTÉCNICA</p></a></li>
+                      <li><a href="#construccion" class="nopadding"><p class="font-home display-menu">CONSTRUCCIÓN</p></a></li>
+                      <li><a href="#obra-civil" class="nopadding"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
+                      <li><a href="#referencias" class="nopadding"><p class="font-home display-menu">REFERENCIAS</p></a></li>
+                      <li><a href="#contacto" class="nopadding"><p class="font-home display-menu">CONTACTO</p></a></li>
+                    </ul> -->
+                    <?php wp_nav_menu('menu'); ?>
                 </div>
               </div>
             </div>
@@ -87,12 +99,26 @@
                 <img class="hide-on-large-only size-logo-menu-dos" src="<?php bloginfo('template_url'); ?>/images/home/ex.png"></a>
               </div>
               <div class="nav-wrapper color-menu">
+                <!-- <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down collapse menu-transparent lista">
-                  <li><p class="font-home display-menu"><?php wp_nav_menu('menu'); ?></p></li>
+                  <li><a href="#inicio"><p class="font-home display-menu">INICIO</p></a></li>
+                  <li><a href="#empresa"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
+                  <li><a href="#geotecnica"><p class="font-home display-menu">GEOTÉCNICA</p></a></li>
+                  <li><a href="#construccion"><p class="font-home display-menu">CONSTRUCCIÓN</p></a></li>
+                  <li><a href="#obra-civil"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
+                  <li><a href="#referencias"><p class="font-home display-menu">REFERENCIAS</p></a></li>
+                  <li><a href="#contacto"><p class="font-home display-menu">CONTACTO</p></a></li>
                 </ul>
                 <ul class="side-nav menu-var-divice lista" id="mobile-demo">
-                  <li><p class="font-home display-menu"><?php wp_nav_menu('menu'); ?></p></li>
-                </ul>
+                  <li style="margin-top: 50px;"><a href="#inicio" class="nopadding"><p class="font-home display-menu">INICIO</p></a></li>
+                  <li><a href="#empresa" class="nopadding"><p class="font-home display-menu">NUESTRA EMPRESA</p></a></li>
+                  <li><a href="#geotecnica" class="nopadding"><p class="font-home display-menu">GEOTÉCNICA</p></a></li>
+                  <li><a href="#construccion" class="nopadding"><p class="font-home display-menu">CONSTRUCCIÓN</p></a></li>
+                  <li><a href="#obra-civil" class="nopadding"><p class="font-home display-menu">OBRA CIVIL</p></a></li>
+                  <li><a href="#referencias" class="nopadding"><p class="font-home display-menu">REFERENCIAS</p></a></li>
+                  <li><a href="#contacto" class="nopadding"><p class="font-home display-menu">CONTACTO</p></a></li>
+                </ul> -->
+                <?php wp_nav_menu('menu'); ?>
               </div>
             </div>
           </div>

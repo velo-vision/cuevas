@@ -29,7 +29,7 @@ get_header(); ?>
 				<div class="row nomargin">
 					<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
 					  <p class="title-dos">GRUPO CUEVAS</p>
-					 		 <?php $post = get_post(92); //Donde 200 será la id del post
+					 		 <?php $post = get_post(104); //92 o 104
 								$title = $post->post_title;
 								$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
 			  				  ?>
@@ -503,46 +503,28 @@ get_header(); ?>
 	<!--contenido 5 sliders obra civil-->
 	<section id="obra-civil">
 		<div class="row nomargin">
-			<div class="col l12 m12 s12 fondo-blanco center-align" style="padding: 0px !important;">
+			<div class="col l12 m12 s12 fondo-blanco center-align" style="padding: 0px !important;">				
 				<div class="col s12 m6 offset-m3 l4 offset-l4 center-align">
-					<p class="title-cinco">OBRA CIVIL</p>
-				</div>
-				<div  id="select" class="col s10 l4 offset-l4 center-align pading-select">
-					<select class="browser-default obra-select" onChange="civil(this)">
-					  <option value="slider1">EBC PACHUCA</option>
-					  <option value="slider2">EBC PACHUCA</option>
-					  <option value="slider3">EBC PACHUCA</option>
-					</select>
+				 <?php $post = get_post(128);
+						$title = $post->post_title;	  ?>
+					<p class="title-cinco"><?php echo $title; ?></p>
 				</div>
 				<div class="col s12 m12 l12 nopadding nomargin">
 					<div id="uno">
-						<div class="slider_model demo-1">
+						<div class="slider_model demo-1">						
 							<div class="slider_model_box">
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img1.jpg" title="Caption1" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img2.jpg" title="Caption2" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img3.jpg" title="Caption3" alt="Long Description" />
+								<!-- slider -->
+								<?php $Slider =  get_field("civil", 128); ?>
+								  	<?php foreach ($Slider as $key => $value) {?>
+								  		<?php echo $value['imagen'] ?>
+								  		<img src="<?php echo $value['imagenslider'] ?>"/>									
+									<?php } ?>
+								<!-- Slider -->								
 							</div>
 						</div>
-					</div>
-					<div id="dos">
-						<div class="slider_model demo-2">
-							<div class="slider_model_box">
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img3.jpg" title="Caption1" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img2.jpg" title="Caption2" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img1.jpg" title="Caption3" alt="Long Description" />
-							</div>
-						</div>
-				    </div>
-					<div id="tres">
-						<div class="slider_model demo-3">
-							<div class="slider_model_box">
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img2.jpg" title="Caption1" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img1.jpg" title="Caption2" alt="Long Description" />
-								<img src="<?php bloginfo('template_url'); ?>/images/obracivil/img3.jpg" title="Caption3" alt="Long Description" />
-							</div>
-						</div>
-				    </div>
+					</div>					
 				</div>
+				<div id="dos"></div><div id="tres"></div>
 			</div>
 		</div>
 	</section>

@@ -501,6 +501,7 @@ nav ul li {
 	border-bottom: solid 2px #c9415f;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .obra-select {

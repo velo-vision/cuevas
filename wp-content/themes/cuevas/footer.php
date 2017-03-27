@@ -93,16 +93,16 @@
           'type': 7
         });
       });
-      $(function(i){
-        $('.demo-2').oka_slider_model({
-          'type': 7
-        });
-      });
-      $(function(i){
-        $('.demo-3').oka_slider_model({
-          'type': 7
-        });
-      });
+      // $(function(i){
+      //   $('.demo-2').oka_slider_model({
+      //     'type': 7
+      //   });
+      // });
+      // $(function(i){
+      //   $('.demo-3').oka_slider_model({
+      //     'type': 7
+      //   });
+      // });
     </script>
 </body>
 </html>

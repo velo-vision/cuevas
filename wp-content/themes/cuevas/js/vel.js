@@ -72,19 +72,19 @@
 		}
 
 	//slider obra civil
-		function obra(evt, animName) {
-		  var i, x, tablinks;
-		  x = document.getElementsByClassName("obras");
-		  for (i = 0; i < x.length; i++) {
-		     x[i].style.display = "none";
-		  }
-		  tablinks = document.getElementsByClassName("cnt");
-		  for (i = 0; i < x.length; i++) {
-		     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-		  }
-		  document.getElementById(animName).style.display = "block";
-		  evt.currentTarget.className += " w3-red";
-		}
+		// function obra(evt, animName) {
+		//   var i, x, tablinks;
+		//   x = document.getElementsByClassName("obras");
+		//   for (i = 0; i < x.length; i++) {
+		//      x[i].style.display = "none";
+		//   }
+		//   tablinks = document.getElementsByClassName("cnt");
+		//   for (i = 0; i < x.length; i++) {
+		//      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+		//   }
+		//   document.getElementById(animName).style.display = "block";
+		//   evt.currentTarget.className += " w3-red";
+		// }
 
 	/** fancybox*/
 		$(document).ready(function() {
@@ -103,49 +103,49 @@
 	(jQuery);
 
 /**select*/
-	$(document).ready(function(){
-		divC = document.getElementById("uno");
-		divC.style.display = "";
+	// $(document).ready(function(){
+	// 	divC = document.getElementById("uno");
+	// 	divC.style.display = "";
 
-		divT = document.getElementById("dos");
-		divT.style.display = "none";
+	// 	divT = document.getElementById("dos");
+	// 	divT.style.display = "none";
 
-		divT = document.getElementById("tres");
-		divT.style.display = "none";
+	// 	divT = document.getElementById("tres");
+	// 	divT.style.display = "none";
 
-		$( window ).resize(function() {
-			var sel = document.getElementById("select");
-			if (sel.value=="slider1"){
-				divC = document.getElementById("uno");
-				divC.style.display = "inline";
+	// 	$( window ).resize(function() {
+	// 		var sel = document.getElementById("select");
+	// 		if (sel.value=="slider1"){
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display = "inline";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "none";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "none";
 
-			}if (sel.value=="slider2"){
+	// 		}if (sel.value=="slider2"){
 
-				divC = document.getElementById("uno");
-				divC.style.display="none";
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display="none";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "inline";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "inline";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "none";
 
-			}if (sel.value=="slider3"){
-				divC = document.getElementById("uno");
-				divC.style.display="none";
+	// 		}if (sel.value=="slider3"){
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display="none";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "none";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "inline";
-			}
-		});
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "inline";
+	// 		}
+	// 	});
 
-	});
+	// });
