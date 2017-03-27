@@ -1469,14 +1469,6 @@ nav .brand-logo {
     font-size: 30px;
 }
 
-.fondo-home{
-    background-image: url(images/home/fondo2.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    background-size: cover;
-    height: 100%;
-}
-
 .separacion-btn2{
     margin: 10px 0;
     text-align: center;
