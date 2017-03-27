@@ -17,8 +17,23 @@
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
    </head>
    <body>
-   <section class="fondo-home" id="inicio">
-     
+
+   <!-- <section class="fondo-home" id="inicio" style="background-image: url('<?php bloginfo('template_url'); ?>/images/home/fondo2.jpg'); !important ;"> -->
+
+
+     <?php  $Fondo =  get_field("fondo", 128); ?>
+
+              <section id="inicio" style="background-image: url('<?php echo $value['imagen'] ?>') !important ;">
+
+
+
+
+
+
+
+
+
+
     <div class="row" >
       <div class="row nomargin">
         <nav class="menu-fijo">

@@ -22,14 +22,11 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--contenido 2 nuestra empresa-->
-
-			<?php// echo do_shortcode('[masterslider id="4"]'); ?>
-
 			<section id="empresa">
 				<div class="row nomargin">
 					<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
 					  <p class="title-dos">GRUPO CUEVAS</p>
-					 		 <?php $post = get_post(92); //Donde 200 será la id del post
+					 		 <?php $post = get_post(104); //Donde 200 será la id del post
 								$title = $post->post_title;
 								$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
 			  				  ?>
@@ -569,10 +566,10 @@ get_header(); ?>
 					  		<div class="col s6 m4 l4 nopadding producto prod-first">
 								<a class="fancybox" href="<?php echo $value['imagen'] ?>" data-fancybox-group="gallery" title="<?php echo $value['titulo_de_la_imagen'] ?>">
 								<img src="<?php echo $value['imagen'] ?>" alt="" width="100%;"/>
-								<div class="mask">  
-							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>  
+								<div class="mask">
+							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>
 							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php echo $value['titulo_de_la_imagen'] ?></p>
-							    </div> 
+							    </div>
 							    </a>
 							</div>
 						<?php } ?>
