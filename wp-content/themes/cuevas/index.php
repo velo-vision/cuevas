@@ -25,29 +25,29 @@ get_header(); ?>
 
 			<?php// echo do_shortcode('[masterslider id="4"]'); ?>
 
-	<section id="empresa">
-		<div class="row nomargin">
-			<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
-			  <p class="title-dos">GRUPO CUEVAS</p>
-			  <P class="bold">"INGENIERO<span class="subrayado-cuavas">S CUEVAS - CONSORC</span>IO EXCOGE"</P>
-				<div class="col s12 m12 l12 nopadding">
-					<img src="<?php bloginfo('template_url'); ?>/images/home/nuestra-empresa.jpg" class="img-nu">
+			<section id="empresa">
+				<div class="row nomargin">
+					<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
+					  <p class="title-dos">GRUPO CUEVAS</p>
+					 		 <?php $post = get_post(92); //Donde 200 será la id del post
+								$title = $post->post_title;
+								$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
+			  				  ?>
+					  <P class="bold"><?php echo  $title; ?></P>
+					  <div class="col l4 offset-l4 m4 offset-m4 s6 offset-s3 borde-cuevas"></div>
+						<div class="col s12 m12 l12 nopadding">
+								<?php if (has_post_thumbnail()) {
+					            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					            echo '<li class="img-cuevas" style="background: url('. $url.')">';
+					            //echo '<img src="'.$url.'" class="size-mas">';
+					            } ?>
+						</div>
+						<div class="col col l12 margin-nustra contenido-cuevas">
+							<p><?php echo $contenido; ?></p>
+						</div>
+					</div>
 				</div>
-				<div class="col col l12 margin-nustra">
-					<p class="title-nuestra">NUESTRA EMPRESA</p>
-					<p class="info-secciondos">Somos una empresa especializada en el <span>Diseño y Construcción Geotécnica, Obra Civil en Cimentaciones y Edificaciones.</span></p>
-					<p class="info-secciondos"><span>Contamos con más de 20 años, de Expericecnia en el Mercado Nacional,</span> donde la honestidad, calidad, garantía, servicio y satisfacción son nuestros valores y compromiso como grupo.</p>
-					<p class="info-secciondos">Nuestros servicios de Ingeniería y Construcción son utilizados en diversos proyectos de:</p>
-					<ul class="info-secciondos margin-lista">
-						<li>Diseño Geológico</li>
-						<li>Construcción Geotécnica</li>
-						<li>Obra Civil y Edificación</li>
-					</ul>
-					<p class="info-secciondos">Nuestra experiencia y conocimiento nos permite <span>desarrollar eficientemente cualquier proyecto de inicio a término, desde la ingeniería hasta la construcción.</span></p>
-				</div>
-			</div>
-		</div>
-	</section>
+			</section>
 	<!--contenido 3 sliders geotecnica-->
 	<section id="geotecnica">
 		<div class="row nomargin">
