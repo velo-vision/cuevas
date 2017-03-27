@@ -564,90 +564,21 @@ get_header(); ?>
 						<?php echo $contenido; ?>
 					</p>
 				</div>
-				<div class="col s12 m12 l12 sep-img-ref nopadding">				
-
-					<?php echo do_shortcode('[nggallery id="1"]'); ?>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" data-fancybox-group="gallery" title="Parque Toreo: Muro Milan">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;"/>
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					    </div>
-					    </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					     </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img3.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					     </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-					 	<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img4.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					    </div>
-					    </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img5.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					     </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img6.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					    </div>
-					    </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img7.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;"/>
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					     </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img8.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					     </a>
-					</div>
-					<div class="col s6 m4 l4 nopadding producto prod-first">
-						<a class="fancybox" href="<?php bloginfo('template_url'); ?>/images/referencias/img1.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet">
-						<img src="<?php bloginfo('template_url'); ?>/images/referencias/milan.jpg" alt="" width="100%;" />
-						<div class="mask">
-					       <h2>Parque torreón</h2>
-					       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br>Muro mílan</p>
-					     </div>
-					    </a>
-					</div>
+				<div class="col s12 m12 l12 sep-img-ref nopadding">
+					<!-- galeria -->
+					<?php $Galeria =  get_field("galeria", 89); ?>
+					  	<?php foreach ($Galeria as $key => $value) {?>
+					  		<div class="col s6 m4 l4 nopadding producto prod-first">
+								<a class="fancybox" href="<?php echo $value['imagen'] ?>" data-fancybox-group="gallery" title="<?php echo $value['titulo_de_la_imagen'] ?>">
+								<img src="<?php echo $value['imagen'] ?>" alt="" width="100%;"/>
+								<div class="mask">  
+							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>  
+							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php echo $value['titulo_de_la_imagen'] ?></p>
+							    </div> 
+							    </a>
+							</div>
+						<?php } ?>
+					<!-- galeria -->
 					</div>
 				</div>
 			</div>
@@ -726,5 +657,4 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--footer-->
-
 <?php get_footer(); ?>
