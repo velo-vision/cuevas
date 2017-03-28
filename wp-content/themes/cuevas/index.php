@@ -42,30 +42,25 @@ get_header(); ?>
 				</div>
 				<div class="col s12 m12 l12 nopadding">
 					<div class="col s12 m12 l8 nopadding">
+
+
+
+
 						<div id="Fade1" class="w3-container geotecnica w3-animate-opacity">
 						    <div class="slider slider-fon">
-									<?php $Slider =  get_field("geo", 160); ?>
-										<?php foreach ($Slider as $key => $value) {?>
-											<?php echo $value['imagen'] ?>
 							    <ul class="slides size-slider-dispo">
+										<?php $Slider =  get_field("estud", 160); ?>
+											<?php $cont =1;
+											foreach ($Slider as $key => $value) {?>
+												<?php echo $value['imagen'] ?>
 										<li>
 											<img src="<?php echo $value['estudios'] ?>"/>
-											<?php } ?>
 											<div class="caption left-align">
-												<?php $Slider =  get_field("geo", 160); ?>
-													<?php foreach ($Slider as $key => $value) {?>
-														<?php echo $value['contenidoo'] ?>
-
-												<h5><?php echo the_field("contenidoo"); ?></h5>
-												<?php } ?>
+														<?php  echo $value['contenidoo'] ?>
+												<?php echo the_field("contenidoo"); ?>
 											</div>
 										</li>
-										<li>
-											<img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-											<div class="caption left-align">
-												<h5>SONDEO PARA EXPLOTACIÓN DEL SUELOOO</h5>
-											</div>
-										</li>
+										<?php } $cont++; ?>
 							    </ul>
 						  	</div>
 						</div>
@@ -74,8 +69,7 @@ get_header(); ?>
 
 
 
-
-						<div id="Fade2" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
+						<div id="<?php echo $cont ?>" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
 						    <div class="slider slider-fon">
 							    <ul class="slides size-slider-dispo">
 							      <li>
@@ -84,11 +78,10 @@ get_header(); ?>
 							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
 							        </div>
 							      </li>
-
 							    </ul>
 						  	</div>
 						 </div>
-						 <div id="Fade3" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
+						 <div id="<?php echo $cont ?>" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
 						    <div class="slider slider-fon">
 							    <ul class="slides size-slider-dispo">
 							      <li>
@@ -232,13 +225,13 @@ get_header(); ?>
 	</section>
 	<!--contenido 4 sliders construccion-->
 <!-- slider -->
-								<?php $Slider3 =  get_field("sliderconstruccion", 170); ?>
+								<!-- <?php $Slider3 =  get_field("sliderconstruccion", 170); ?>
 								  	<?php /*foreach ($Slider3 as $key => $value) {?>
 								  		<?php echo $value['titulo'] ?>
 								  		<?php echo $value['menu1'] ?>
-								  		<img src="<?php //echo $value['imagenslider'] ?>"/>									
-									<?php } */?>
-								<!-- Slider -->	
+								  		<img src="<?php //echo $value['imagenslider'] ?>"/>
+									<?php } */?> -->
+								<!-- Slider -->
 	<section id="construccion">
 		<div class="row nomargin">
 			<div class="col s12 m12 l12 fondo-azul center-align nopadding">
@@ -254,19 +247,19 @@ get_header(); ?>
 								  global $post;
 								  $args = array( "category" => 6 );
 								  $myposts = get_posts( $args );?>
-								  <?php $cont =1; 
+								  <?php $cont =1;
 								  foreach( $myposts as $post ) : setup_postdata($post); ?>
 										<li>
 											<div class="collapsible-header texto-sliderizquierdo-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 											<div class="collapsible-body construccion-menu">
 										    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">
-										    		<?php 
+										    		<?php
 										    		$entrada = $post;
 										    		//echo $entrada;
-										    		$TituloMenu =  get_field("Menu1", $entrada); ?>	
+										    		$TituloMenu =  get_field("Menu1", $entrada); ?>
 											  	 	<p class="content-slider-iz"><?php echo $TituloMenu?></p>
 
-											  	 	
+
 												</a>
 											</div>
 										</li>
@@ -291,9 +284,9 @@ get_header(); ?>
 								    </div>
 							    </li> -->
 <!-- slider -->
-								
-								<!-- Slider -->	
-							    
+
+								<!-- Slider -->
+
 							    <li>
 							    	<div class="collapsible-header texto-sliderizquierdo-title">BOMBEO EYECTOR <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 							    	<div class="collapsible-body construccion-menu">
