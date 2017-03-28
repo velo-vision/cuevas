@@ -22,9 +22,6 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--contenido 2 nuestra empresa-->
-
-			<?php// echo do_shortcode('[masterslider id="4"]'); ?>
-
 			<section id="empresa">
 				<div class="row nomargin">
 					<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
@@ -231,6 +228,14 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--contenido 4 sliders construccion-->
+<!-- slider -->
+								<?php $Slider3 =  get_field("sliderconstruccion", 170); ?>
+								  	<?php /*foreach ($Slider3 as $key => $value) {?>
+								  		<?php echo $value['titulo'] ?>
+								  		<?php echo $value['menu1'] ?>
+								  		<img src="<?php //echo $value['imagenslider'] ?>"/>									
+									<?php } */?>
+								<!-- Slider -->	
 	<section id="construccion">
 		<div class="row nomargin">
 			<div class="col s12 m12 l12 fondo-azul center-align nopadding">
@@ -241,7 +246,30 @@ get_header(); ?>
 					<div id="content-l" class="col s12 m12 l4 content sin-disc nopadding scroll-slider">
 						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider">
 							<ul class="collapsible" data-collapsible="accordion">
-								<li>
+								<!-- contruccion -->
+								<?php
+								  global $post;
+								  $args = array( "category" => 6 );
+								  $myposts = get_posts( $args );?>
+								  <?php $cont =1; 
+								  foreach( $myposts as $post ) : setup_postdata($post); ?>
+										<li>
+											<div class="collapsible-header texto-sliderizquierdo-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+											<div class="collapsible-body construccion-menu">
+										    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">
+										    		<?php 
+										    		$entrada = $post;
+										    		//echo $entrada;
+										    		$TituloMenu =  get_field("Menu1", $entrada); ?>	
+											  	 	<p class="content-slider-iz"><?php echo $TituloMenu?></p>
+
+											  	 	
+												</a>
+											</div>
+										</li>
+								<?php  $cont ++; endforeach; ?>
+								<!-- contruccion -->
+								<!-- <li>
 							    	<div class="collapsible-header texto-sliderizquierdo-title">CIMIENTACIONES PROFUNDAS <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 								    <div class="collapsible-body construccion-menu">
 								    	 <a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con1')">
@@ -258,7 +286,11 @@ get_header(); ?>
 								    		<p class="content-slider-iz">micropilotes.</p>
 								    	</a>
 								    </div>
-							    </li>
+							    </li> -->
+<!-- slider -->
+								
+								<!-- Slider -->	
+							    
 							    <li>
 							    	<div class="collapsible-header texto-sliderizquierdo-title">BOMBEO EYECTOR <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 							    	<div class="collapsible-body construccion-menu">
