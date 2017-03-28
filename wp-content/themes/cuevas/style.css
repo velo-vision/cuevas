@@ -803,6 +803,10 @@ nav ul li {
     background-image: url('images/referencias/rojo.png');
 }
 
+.imgen-galeria{
+    width: 100%;
+    height: 20vw;
+}
 /*seccion 7 contacto*/
 .fondo-contacto{
 	background-color: #fff;
@@ -1337,6 +1341,10 @@ nav .brand-logo {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#f6f6f6', GradientType=1 );
 }
 
+.imgen-galeria {
+    width: 100%;
+    height: 50vw;
+}
 /****seccion 5 obra civil***/
 .pading-select{
     padding: 0px !important;
