@@ -1,6 +1,14 @@
 <?php
 //template name: index
-get_header(); ?>
+get_header(); 
+
+
+echo "code";
+print_r(get_field("galeriasPrueba", 170));
+echo "cide";
+
+
+?>
 <!--contenido 1 inicio-->
 			<div class="row margin-contenido">
 				<div class="col s12 l12 center-align">
@@ -228,14 +236,40 @@ get_header(); ?>
 		</div>
 	</section>
 	<!--contenido 4 sliders construccion-->
-<!-- slider -->
-								<?php $Slider3 =  get_field("sliderconstruccion", 170); ?>
-								  	<?php /*foreach ($Slider3 as $key => $value) {?>
-								  		<?php echo $value['titulo'] ?>
-								  		<?php echo $value['menu1'] ?>
-								  		<img src="<?php //echo $value['imagenslider'] ?>"/>									
-									<?php } */?>
-								<!-- Slider -->	
+------------------
+
+<?php
+
+$rows = get_field('galeriasPrueba',170 ); // get all the rows
+$first_row = $rows[0]; // get the first row
+$first_row_image = $first_row['galeriasPrueba' ]; // get the sub field value 
+
+// Note
+// $first_row_image = 123 (image ID)
+
+$image = wp_get_attachment_image_src( $first_row_image, 'full' );
+// url = $image[0];
+// width = $image[1];
+// height = $image[2];
+?>
+<img src="<?php echo $image[0]; ?>" />
+
+
+
+	<?php if( have_rows('galeriasPrueba', 170) ): ?>
+
+    <ul>
+
+    <?php while( have_rows('galeriasPrueba', 170) ): the_row(); ?>
+
+        <li><?php echo the_sub_field('title'); ?></li>
+
+    <?php endwhile; ?>
+
+    </ul>
+
+<?php endif; ?>
+-------------------
 	<section id="construccion">
 		<div class="row nomargin">
 			<div class="col s12 m12 l12 fondo-azul center-align nopadding">
@@ -256,277 +290,83 @@ get_header(); ?>
 										<li>
 											<div class="collapsible-header texto-sliderizquierdo-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 											<div class="collapsible-body construccion-menu">
-										    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">
-										    		<?php 
-										    		$entrada = $post;
-										    		//echo $entrada;
-										    		$TituloMenu =  get_field("Menu1", $entrada); ?>	
-											  	 	<p class="content-slider-iz"><?php echo $TituloMenu?></p>
-
-											  	 	
-												</a>
+									    		<?php 
+									    		$entrada = $post;										    		
+									    		$TituloMenu =  get_field("galeriasPrueba", $entrada); ?>											  	 	
+										  	 		<?php foreach ($TituloMenu as $key => $value) {?>
+										  	 		<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">		  		
+												  		<p class="content-slider-iz"><?php echo $value['titulogalerias'] ?></p>
+												  		</a>
+												 <?php  $cont ++; } ?>
 											</div>
 										</li>
-								<?php  $cont ++; endforeach; ?>
-								<!-- contruccion -->
-								<!-- <li>
-							    	<div class="collapsible-header texto-sliderizquierdo-title">CIMIENTACIONES PROFUNDAS <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-								    <div class="collapsible-body construccion-menu">
-								    	 <a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con1')">
-									  	 	<p class="content-slider-iz">pilotes de punta y/o fricción</p>
-										</a>
-									 </div>
-									 <div class="collapsible-body content-slider-iz construccion-menu">
-									 	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con2')">
-									  	 	<p class="content-slider-iz">pilas coladas << in situ >></p>
-									  	</a>
-								    </div>
-								    <div class="collapsible-body construccion-menu">
-								    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con3')">
-								    		<p class="content-slider-iz">micropilotes.</p>
-								    	</a>
-								    </div>
-							    </li> -->
-<!-- slider -->
-								
-								<!-- Slider -->	
-							    
-							    <li>
-							    	<div class="collapsible-header texto-sliderizquierdo-title">BOMBEO EYECTOR <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-							    	<div class="collapsible-body construccion-menu">
-							    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con4')">
-							    		<p class="content-slider-iz">Lorem ipsum dolor sit amet.</p>
-							    	</a>
-							    	</div>
-							  	</li>
-							  	<li>
-								    <div class="collapsible-header texto-sliderizquierdo-title">ESTABILIZACIÓN EXCAVACIONES PROFUNDAS <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-								    <div class="collapsible-body construccion-menu">
-								    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con5')">
-								    		<p class="content-slider-iz">Lorem ipsum dolor sit amet.</p>
-								    	</a>
-								    </div>
-								 </li>
-								 <li>
-								    <div class="collapsible-header texto-sliderizquierdo-title">ESTABILIZACIÓN DE CORTES Y TALUDES <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-								    <div class="collapsible-body construccion-menu">
-								    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con6')">
-								    		<p  class="content-slider-iz">Lorem ipsum dolor sit amet.</p>
-								    	</a>
-								    </div>
-								  </li>
-								   <li>
-								    <div class="collapsible-header texto-sliderizquierdo-title">COMPACTACIÓN DINÁMICA <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-								    	<div class="collapsible-body construccion-menu">
-									   		<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con7')">
-									    		<p class="content-slider-iz">Lorem ipsum dolor sit amet.</p>
-									    	</a>
-								    	</div>
-								  </li>
-								  <li>
-								    <div class="collapsible-header texto-sliderizquierdo-title">SUBEXCAVACIÓN <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-									    <div class="collapsible-body construccion-menu">
-									    	<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con8')">
-									    		<p class="content-slider-iz">Lorem ipsum dolor sit amet.</p>
-									    	</a>
-									    </div>
-								  </li>
+								<?php  endforeach; ?>
+								<!-- contruccion -->								
 							</ul>
 						</nav>
 					</div>
 					<div class="col s12 m12 l8 nopadding">
-						<div id="con1" class="w3-container construccion w3-animate-opacity">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con2" class="w3-container construccion w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con3" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con4" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con5" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con6" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con7" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="con8" class="w3-container construccion w3-animate-opacity" style="display: none">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
+					<!-- slider construccion -->
+							<?php
+								  global $post;
+								  $args = array( "category" => 6 );
+								  $myposts = get_posts( $args );?>
+								  <?php $cont2 =1; 
+								  foreach( $myposts as $post ) : setup_postdata($post); ?>
+								  	<?php if (1 == $cont2){?>
+								  			<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity">
+											    <div class="slider slider-fon">
+												    <ul class="slides size-slider-dispo">
+												    <!---->
+												    <?php 
+									    		$entrada = $post;										    		
+									    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
+									  	 		<?php foreach ($slidersc as $key => $value) {?>
+											  	 		<li>
+													        <img src="<?php echo $value['imagenCimientos'] ?>">
+													        <div class="caption left-align">
+													          <h5><?php echo $value['titulo'] ?></h5>
+													        </div>
+													    </li>												  		
+												 	<?php } ?>
+												  <!----><?php 
+												  $sliderscx =  get_field("slideropcional", $entrada); ?>											  	 	
+											  	 		<?php foreach ($sliderscx as $key => $value) {?>
+												  	 		<li>
+														        <!-- <img src="<?php // echo $value['submenu'] ?>"> -->
+														        <div class="caption left-align">
+														         <img src="<?php echo $value['slider2'] ?>">
+														           <h5><?php echo $value['tituloimagen'] ?></h5>
+														        </div>
+														   		</li>										  		
+													 	<?php }?>
+
+												    </ul>
+											  	</div>
+											 </div>
+								  		<?php }else{ ?>
+								  				<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="display: none;">
+												    <div class="slider slider-fon">
+													    <ul class="slides size-slider-dispo">
+													    <!---->
+													    <?php 
+											    		$entrada = $post;										    		
+											    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
+											  	 		<?php foreach ($slidersc as $key => $value) {?>
+												  	 		<li>
+														        <img src="<?php echo $value['imagenCimientos'] ?>">
+														        <div class="caption left-align">
+														          <h5><?php echo $value['titulo'] ?></h5>
+														        </div>
+														    </li>												  		
+													 	<?php } ?>
+													  <!---->												      
+													    </ul>
+												  	</div>
+												 </div>
+								  		<?php } $cont2 ++; ?>
+								<?php  endforeach; ?>
+					<!-- slider construccion -->
 					</div>
 				</div>
 			</div>
@@ -580,12 +420,12 @@ get_header(); ?>
 					<!-- galeria -->
 					<?php $Galeria =  get_field("galeria", 89); ?>
 					  	<?php foreach ($Galeria as $key => $value) {?>
-					  		<div class="col s6 m4 l4 nopadding producto prod-first">
+					  		<div class="col s12 m4 l4 nopadding producto prod-first">
 								<a class="fancybox" href="<?php echo $value['imagen'] ?>" data-fancybox-group="gallery" title="<?php echo $value['titulo_de_la_imagen'] ?>">
-								<img src="<?php echo $value['imagen'] ?>" alt="" width="100%;"/>
+								<img src="<?php echo $value['imagen'] ?>" class="imgen-galeria"/>
 								<div class="mask">  
 							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>  
-							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php echo $value['titulo_de_la_imagen'] ?></p>
+							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php  $value['titulo_de_la_imagen'] ?></p>
 							    </div> 
 							    </a>
 							</div>
