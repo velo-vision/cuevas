@@ -69,7 +69,10 @@
     border:1px solid #000;
     margin-bottom: 20px;
     margin-top: -15px;
+}
 
+.ms-slide{
+	width: 100%;
 }
 /*home*/
 
@@ -168,7 +171,7 @@ nav{
 
 /*seccion 1 inicio*/
 .fondo-home{
-	background-image: url('images/home/fondo2.jpg');
+	/*background-image: url('images/home/fondo2.jpg');*/
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;

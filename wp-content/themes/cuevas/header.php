@@ -18,21 +18,11 @@
    </head>
    <body>
 
-   <section class="fondo-home" id="inicio" style="background-image: url('<?php bloginfo('template_url'); ?>/images/home/fondo2.jpg'); !important ;">
-
-
-     <?php  $Fondo =  get_field("fondo", 128); ?>
-
-              <section id="inicio" style="background-image: url('<?php echo $value['background'] ?>') !important ;">
-
-
-
-
-
-
-
-
-
+     <?php $Slider =  get_field("fondo", 158); ?>
+         <?php foreach ($Slider as $key => $value) {?>
+           <?php echo $value['imagen'] ?>
+   <section class="fondo-home" id="inicio" style="background-image: url('<?php echo $value['obrascuevas'] ?>'); !important ;">
+         <?php } ?>
 
     <div class="row" >
       <div class="row nomargin">

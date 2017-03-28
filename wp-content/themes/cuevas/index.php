@@ -2,33 +2,18 @@
 //template name: index
 get_header(); ?>
 <!--contenido 1 inicio-->
-			<div class="row margin-contenido">
-				<div class="col s12 l12 center-align">
-					<p class="title-home">Bienvenidos a</p>
-					<p class="subtitle">GRUPO CUEVAS</p>
-					<div class="col s12 m6 l6 separacion-btn">
-						<a href="#empresa"><input type="submit" name="home-mas" value="CONOCE MÁS" class="btn btn-home"></a>
-					</div>
-					<div class="col s12 m6 l6 separacion-btn2">
-						<a href="#referencias"><input type="submit" name="obras" value="OBRAS" class="btn btn-home"></a>
-					</div>
-					<div class="col s12 m12 center-align hide icons-sociales">
-	                  <a href="#"><i class="fa fa-facebook blanco icon-social-sep" aria-hidden="true"></i></a>
-	                  <a href="#"><i class="fa fa-twitter blanco icon-social-sep" aria-hidden="true"></i></a>
-	                  <a href="#"><i class="fa fa-instagram blanco icon-social-sep" aria-hidden="true"></i></a>
-	               </div>
-				</div>
-			</div>
+			<?php $post = get_post(158); //92 o 104
+		 	$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
+			echo $contenido;
+		 		?>
 		</div>
 	</section>
 	<!--contenido 2 nuestra empresa-->
-
-			<?php// echo do_shortcode('[masterslider id="4"]'); ?>
-
 			<section id="empresa">
 				<div class="row nomargin">
 					<div class="col s12 m8 offset-m2 l6 offset-l3 center-align margin-cvas nopadding">
 					  <p class="title-dos">GRUPO CUEVAS</p>
+
 					 		 <?php $post = get_post(104); //92 o 104
 								$title = $post->post_title;
 								$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
@@ -59,22 +44,37 @@ get_header(); ?>
 					<div class="col s12 m12 l8 nopadding">
 						<div id="Fade1" class="w3-container geotecnica w3-animate-opacity">
 						    <div class="slider slider-fon">
+									<?php $Slider =  get_field("geo", 160); ?>
+										<?php foreach ($Slider as $key => $value) {?>
+											<?php echo $value['imagen'] ?>
 							    <ul class="slides size-slider-dispo">
-									<li>
-										<img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-										<div class="caption left-align">
-											<h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-										</div>
-									</li>
-									<li>
-										<img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-										<div class="caption left-align">
-											<h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-										</div>
-									</li>
+										<li>
+											<img src="<?php echo $value['estudios'] ?>"/>
+											<?php } ?>
+											<div class="caption left-align">
+												<?php $Slider =  get_field("geo", 160); ?>
+													<?php foreach ($Slider as $key => $value) {?>
+														<?php echo $value['contenidoo'] ?>
+
+												<h5><?php echo the_field("contenidoo"); ?></h5>
+												<?php } ?>
+											</div>
+										</li>
+										<li>
+											<img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
+											<div class="caption left-align">
+												<h5>SONDEO PARA EXPLOTACIÓN DEL SUELOOO</h5>
+											</div>
+										</li>
 							    </ul>
 						  	</div>
 						</div>
+
+
+
+
+
+
 						<div id="Fade2" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
 						    <div class="slider slider-fon">
 							    <ul class="slides size-slider-dispo">
@@ -503,7 +503,7 @@ get_header(); ?>
 	<!--contenido 5 sliders obra civil-->
 	<section id="obra-civil">
 		<div class="row nomargin">
-			<div class="col l12 m12 s12 fondo-blanco center-align" style="padding: 0px !important;">				
+			<div class="col l12 m12 s12 fondo-blanco center-align" style="padding: 0px !important;">
 				<div class="col s12 m6 offset-m3 l4 offset-l4 center-align">
 				 <?php $post = get_post(128);
 						$title = $post->post_title;	  ?>
@@ -511,18 +511,18 @@ get_header(); ?>
 				</div>
 				<div class="col s12 m12 l12 nopadding nomargin">
 					<div id="uno">
-						<div class="slider_model demo-1">						
+						<div class="slider_model demo-1">
 							<div class="slider_model_box">
 								<!-- slider -->
 								<?php $Slider =  get_field("civil", 128); ?>
 								  	<?php foreach ($Slider as $key => $value) {?>
 								  		<?php echo $value['imagen'] ?>
-								  		<img src="<?php echo $value['imagenslider'] ?>"/>									
+								  		<img src="<?php echo $value['imagenslider'] ?>"/>
 									<?php } ?>
-								<!-- Slider -->								
+								<!-- Slider -->
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<div id="dos"></div><div id="tres"></div>
 			</div>
@@ -551,10 +551,10 @@ get_header(); ?>
 					  		<div class="col s6 m4 l4 nopadding producto prod-first">
 								<a class="fancybox" href="<?php echo $value['imagen'] ?>" data-fancybox-group="gallery" title="<?php echo $value['titulo_de_la_imagen'] ?>">
 								<img src="<?php echo $value['imagen'] ?>" alt="" width="100%;"/>
-								<div class="mask">  
-							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>  
+								<div class="mask">
+							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>
 							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php echo $value['titulo_de_la_imagen'] ?></p>
-							    </div> 
+							    </div>
 							    </a>
 							</div>
 						<?php } ?>
