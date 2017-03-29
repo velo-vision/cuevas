@@ -103,10 +103,11 @@ nav{
     background-color: transparent;
 }
 
-.menu-transparent li{
-  line-height: 5px;
-	text-transform: uppercase;
-	padding: 0 10px;
+.menu-transparent li {
+    line-height: 53px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    margin-top: -38px;
 }
 
 .collapsible{
@@ -124,7 +125,7 @@ nav{
 }
 .menu-var-divice{
 	background-color: rgba(17,48,155, .7);
-	width: 88%;
+	width: 45%;
 	border: solid 1px #fff;
 }
 
@@ -1943,13 +1944,16 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+	.menu-var-divice{
+		width: 55%;
+	}
 
 .img-cuevas {
 	 height: 211px;
@@ -1974,13 +1978,16 @@ nav {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:200px) and (max-width:600px){
+	.menu-var-divice{
+		width: 65%;
+	}
 	.img-cuevas {
     height: 206px;
 }
@@ -1999,7 +2006,7 @@ nav {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
