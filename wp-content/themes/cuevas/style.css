@@ -107,10 +107,11 @@ nav{
     background-color: transparent;
 }
 
-.menu-transparent li{
-  line-height: 5px;
-	text-transform: uppercase;
-	padding: 0 10px;
+.menu-transparent li {
+    line-height: 53px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    margin-top: -38px;
 }
 
 .collapsible{
@@ -128,7 +129,7 @@ nav{
 }
 .menu-var-divice{
 	background-color: rgba(17,48,155, .7);
-	width: 88%;
+	width: 45%;
 	border: solid 1px #fff;
 }
 
@@ -1483,7 +1484,7 @@ nav .brand-logo {
 }
 
 .margin-contenido{
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .subtitle{
@@ -1934,6 +1935,16 @@ element.style {
 /****************************MEDIAS JRG*****************************/
 
 @media only screen and (min-width:768px) and (max-width:992px){
+	.img-cuevas {
+    height: 267px;
+}
+	nav {
+		background: #113073;
+}
+
+.fondo-home {
+	height: 800px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1942,13 +1953,32 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+	.menu-var-divice{
+		width: 55%;
+	}
+
+.img-cuevas {
+	 height: 211px;
+}
+
+nav {
+	background: #113073;
+}
+
+.fondo-home {
+	height: 600px;
+}
+
+.subtitle {
+    font-size: 50px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1957,13 +1987,26 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:200px) and (max-width:600px){
+	.menu-var-divice{
+		width: 65%;
+	}
+	.img-cuevas {
+    height: 206px;
+}
+
+	nav {
+    background: #113073;
+}
+	.fondo-home {
+    height: 360px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1972,8 +2015,20 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
+}
+
+@media only screen and (min-width:1100px) and (max-width:1400px){
+	.img-cuevas {
+    height: 330px;
+}
+}
+
+@media only screen and (min-width:992px) and (max-width:1100px){
+	.img-cuevas {
+    height: 265px;
+}
 }
