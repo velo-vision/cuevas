@@ -92,11 +92,12 @@
                 <img class="hide-on-large-only size-logo-menu-dos" src="<?php bloginfo('template_url'); ?>/images/home/ex.png"></a>
               </div>
               <div class="nav-wrapper color-menu">
+                <a href="#" data-activates="mobile-demo" class="button-collapse separacion-menu"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down collapse menu-transparent lista">
-                  <li><p class="font-home display-menu"><?php wp_nav_menu('menu'); ?></p></li>
+                  <li><p class="font-home display-menu"><?php // wp_nav_menu('menu'); ?></p></li>
                 </ul>
                 <ul class="side-nav menu-var-divice lista" id="mobile-demo">
-                  <li><p class="font-home display-menu"><?php wp_nav_menu('menu'); ?></p></li>
+                  <li><p class="font-home display-menu"><?php // wp_nav_menu('menu'); ?></p></li>
                 </ul>
               </div>
             </div>

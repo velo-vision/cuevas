@@ -1474,7 +1474,7 @@ nav .brand-logo {
 }
 
 .margin-contenido{
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .subtitle{
@@ -1925,6 +1925,16 @@ element.style {
 /****************************MEDIAS JRG*****************************/
 
 @media only screen and (min-width:768px) and (max-width:992px){
+	.img-cuevas {
+    height: 267px;
+}
+	nav {
+		background: #113073;
+}
+
+.fondo-home {
+	height: 800px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1941,6 +1951,22 @@ element.style {
 
 @media only screen and (min-width:600px) and (max-width:768px){
 
+.img-cuevas {
+	 height: 211px;
+}
+
+nav {
+	background: #113073;
+}
+
+.fondo-home {
+	height: 600px;
+}
+
+.subtitle {
+    font-size: 50px;
+}
+
 .side-nav a {
     padding: 0 16px;
     color: #fff;
@@ -1955,6 +1981,16 @@ element.style {
 }
 
 @media only screen and (min-width:200px) and (max-width:600px){
+	.img-cuevas {
+    height: 206px;
+}
+
+	nav {
+    background: #113073;
+}
+	.fondo-home {
+    height: 360px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1967,4 +2003,16 @@ element.style {
     text-transform: uppercase ;
 }
 
+}
+
+@media only screen and (min-width:1100px) and (max-width:1400px){
+	.img-cuevas {
+    height: 330px;
+}
+}
+
+@media only screen and (min-width:992px) and (max-width:1100px){
+	.img-cuevas {
+    height: 265px;
+}
 }
