@@ -1,13 +1,9 @@
 <?php
 //template name: index
-get_header(); 
-
-
+get_header();
 echo "code";
 print_r(get_field("galeriasPrueba", 170));
 echo "cide";
-
-
 ?>
 <!--contenido 1 inicio-->
 			<?php $post = get_post(158); //92 o 104
@@ -49,223 +45,84 @@ echo "cide";
 					<p class="title-tres">GEOTÉCNICA</p>
 				</div>
 				<div class="col s12 m12 l12 nopadding">
+					<!--slider geo-->
 					<div class="col s12 m12 l8 nopadding">
-
-
-
-
-						<div id="Fade1" class="w3-container geotecnica w3-animate-opacity">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-										<?php $Slider =  get_field("estud", 160); ?>
-											<?php $cont =1;
-											foreach ($Slider as $key => $value) {?>
-												<?php echo $value['imagen'] ?>
-										<li>
-											<img src="<?php echo $value['estudios'] ?>"/>
-											<div class="caption left-align">
-														<?php  echo $value['contenidoo'] ?>
-												<?php echo the_field("contenidoo"); ?>
-											</div>
-										</li>
-										<?php } $cont++; ?>
-							    </ul>
-						  	</div>
-						</div>
-
-
-
-
-
-						<div id="<?php echo $cont ?>" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="<?php echo $cont ?>" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="Fade4" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="Fade5" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						 <div id="Fade6" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						 </div>
-						<div id="Fade7" class="w3-container geotecnica w3-animate-opacity" style="display: none;">
-						    <div class="slider slider-fon">
-							    <ul class="slides size-slider-dispo">
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img1.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img2.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							      <li>
-							        <img src="<?php bloginfo('template_url'); ?>/images/geo/img3.jpg">
-							        <div class="caption left-align">
-							          <h5>SONDEO PARA EXPLOTACIÓN DEL SUELO</h5>
-							        </div>
-							      </li>
-							    </ul>
-						  	</div>
-						</div>
+								<?php $Geoslider =  get_field("estud", 160); ?>
+								<?php $ctn =1;?>
+								<?php foreach ($Geoslider as $key => $value){ ?>
+									 <?php ($ctn>1)?$style='display: none;':''; ?>
+									<div id="Fade<?php echo $ctn; ?>" class="w3-container geotecnica w3-animate-opacity" style="<?php echo $style; ?>">
+										<div class="slider slider-fon">
+											<ul class="slides size-slider-dispo">
+												<?php foreach ($value['estudios'] as $key => $gale) {?>
+													<li>
+														<img src="<?php echo $gale['url'] ?>"/>
+														<div class="caption left-align">
+															<h5><?php echo $gale['title'] ?></h5>
+														</div>
+													</li>
+												<?php }
+												?>
+											</ul>
+										</div>
+									</div>
+									<?php $ctn ++; ?>
+								<?php } ?>
 					</div>
+					<!--slider geo-->
+					<!-- slider construccion -->
+            <?php
+                global $post;
+                $args = array( "category" => 6 );
+                $myposts = get_posts( $args );?>
+                <?php $cont2 =1; ?>
+                <?php foreach( $myposts as $post ) : setup_postdata($post); ?>
+                    <?php $rows = get_field('galeriasPrueba', $post);?>
+                        <?php    foreach ($rows as $key => $galeriaprueba) {?>
+                        <?php ($cont2>1)?$style='display: none;':'';?>
+                            <div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="<?php echo $style; ?>">
+                                <div class="slider slider-fon">
+                                    <ul class="slides size-slider-dispo">
+                                    <!---->
+                                <?php foreach ($galeriaprueba['galleriaprueba'] as $key => $gale) {?>
+                                    <li>
+                                        <img src="<?php echo $gale['url'] ?>">
+                                        <div class="caption left-align">
+                                          <h5><?php echo $gale['title'] ?></h5>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                                    </ul>
+                                  </div>
+                            </div>
+                                <?php $cont2 ++; } ?>
+                        <?php  endforeach; ?>
+                    <!-- slider construccion -->
+					<!--menu geo -->
 					<div class="col s12 m12 l4 nopadding">
-						<nav  class="w3-sidenav w3-black w3-card-2">
-						    <a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade1')">
-							  	<div class="col s12 l12 text-slider-derec">
-									<p>ESTUDIOS DE MECÁNICA DE SUELOS</p>
-								</div>
-							</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade2')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>SONDEO PARA LA EXPLORACIÓN DEL SUBSUELO</P>
-								</div>
-						 	</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade3')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>DISEÑO DE CIMIENTACIONES, ASESORIA GEOTÉCNICA DE OBRA EN LA CONSTRUCCIÓN DE CIMIENTOS</P>
-								</div>
-						 	</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade4')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>ASESORÍA EN CIMIENTACIONES DIFÍCILES.</P>
-								</div>
-						 	</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade5')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>SUPERVISIÓN GEOTÉCNICA EN EXCAVACIONES PROFUNDAS.</P>
-								</div>
-						 	</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade6')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>ANÁLISIS DE ESTABILIDAD DE TALUDES EN EXCAVACIONES PROFUNDAS.</P>
-								</div>
-						 	</a>
-						 	<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade7')">
-						 		<div class="col s12 l12 text-slider-derec">
-									<P>DISEÑO DE PAVIMENTOS FLEXIBLES Y RÍGIDOS.</P>
-								</div>
-						 	</a>
-						 </nav>
+					  <nav  class="w3-sidenav w3-black w3-card-2">
+					    <!-- geotecnica -->
+					      <?php
+					            global $post;
+					            $args = array( "category" => 8 );
+					            $myposts = get_posts( $args );?>
+					            <?php $geo =1;
+					            foreach( $myposts as $post ) : setup_postdata($post); ?>
+					                <a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geo?>')">
+					                  <div class="col s12 l12 text-slider-derec">
+					                  	<p><?php the_title(); ?></p>
+					                </div>
+					              </a>
+					               <?php  $geo ++; ?>
+					          <?php  endforeach; ?>
+					   </nav>
 					</div>
+					<!-- geoternica -->
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--contenido 4 sliders construccion-->
-------------------
-
-<?php
-
-$rows = get_field('galeriasPrueba',170 ); // get all the rows
-$first_row = $rows[0]; // get the first row
-$first_row_image = $first_row['galeriasPrueba' ]; // get the sub field value 
-
-// Note
-// $first_row_image = 123 (image ID)
-
-$image = wp_get_attachment_image_src( $first_row_image, 'full' );
-// url = $image[0];
-// width = $image[1];
-// height = $image[2];
-?>
-<img src="<?php echo $image[0]; ?>" />
-
-
-
-	<?php if( have_rows('galeriasPrueba', 170) ): ?>
-
-    <ul>
-
-    <?php while( have_rows('galeriasPrueba', 170) ): the_row(); ?>
-
-        <li><?php echo the_sub_field('title'); ?></li>
-
-    <?php endwhile; ?>
-
-    </ul>
-
-<?php endif; ?>
--------------------
 	<section id="construccion">
 		<div class="row nomargin">
 			<div class="col s12 m12 l12 fondo-azul center-align nopadding">
@@ -286,11 +143,11 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 										<li>
 											<div class="collapsible-header texto-sliderizquierdo-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 											<div class="collapsible-body construccion-menu">
-									    		<?php 
-									    		$entrada = $post;										    		
-									    		$TituloMenu =  get_field("galeriasPrueba", $entrada); ?>											  	 	
+									    		<?php
+									    		$entrada = $post;
+									    		$TituloMenu =  get_field("galeriasPrueba", $entrada); ?>
 										  	 		<?php foreach ($TituloMenu as $key => $value) {?>
-										  	 		<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">		  		
+										  	 		<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">
 												  		<p class="content-slider-iz"><?php echo $value['titulogalerias'] ?></p>
 												  		</a>
 												 <?php  $cont ++; } ?>
@@ -307,26 +164,26 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 								  global $post;
 								  $args = array( "category" => 6 );
 								  $myposts = get_posts( $args );?>
-								  <?php $cont2 =1; 
+								  <?php $cont2 =1;
 								  foreach( $myposts as $post ) : setup_postdata($post); ?>
 								  	<?php if (1 == $cont2){?>
 								  			<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity">
 											    <div class="slider slider-fon">
 												    <ul class="slides size-slider-dispo">
 												    <!---->
-												    <?php 
-									    		$entrada = $post;										    		
-									    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
+												    <?php
+									    		$entrada = $post;
+									    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>
 									  	 		<?php foreach ($slidersc as $key => $value) {?>
 											  	 		<li>
 													        <img src="<?php echo $value['imagenCimientos'] ?>">
 													        <div class="caption left-align">
 													          <h5><?php echo $value['titulo'] ?></h5>
 													        </div>
-													    </li>												  		
+													    </li>
 												 	<?php } ?>
-												  <!----><?php 
-												  $sliderscx =  get_field("slideropcional", $entrada); ?>											  	 	
+												  <!----><?php
+												  $sliderscx =  get_field("slideropcional", $entrada); ?>
 											  	 		<?php foreach ($sliderscx as $key => $value) {?>
 												  	 		<li>
 														        <!-- <img src="<?php // echo $value['submenu'] ?>"> -->
@@ -334,7 +191,7 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 														         <img src="<?php echo $value['slider2'] ?>">
 														           <h5><?php echo $value['tituloimagen'] ?></h5>
 														        </div>
-														   		</li>										  		
+														   		</li>
 													 	<?php }?>
 
 												    </ul>
@@ -345,18 +202,18 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 												    <div class="slider slider-fon">
 													    <ul class="slides size-slider-dispo">
 													    <!---->
-													    <?php 
-											    		$entrada = $post;										    		
-											    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
+													    <?php
+											    		$entrada = $post;
+											    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>
 											  	 		<?php foreach ($slidersc as $key => $value) {?>
 												  	 		<li>
 														        <img src="<?php echo $value['imagenCimientos'] ?>">
 														        <div class="caption left-align">
 														          <h5><?php echo $value['titulo'] ?></h5>
 														        </div>
-														    </li>												  		
+														    </li>
 													 	<?php } ?>
-													  <!---->												      
+													  <!---->
 													    </ul>
 												  	</div>
 												 </div>
@@ -419,8 +276,8 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 					  		<div class="col s12 m4 l4 nopadding producto prod-first">
 								<a class="fancybox" href="<?php echo $value['imagen'] ?>" data-fancybox-group="gallery" title="<?php echo $value['titulo_de_la_imagen'] ?>">
 								<img src="<?php echo $value['imagen'] ?>" class="imgen-galeria"/>
-								<div class="mask">  
-							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>  
+								<div class="mask">
+							       <h2><?php echo $value['titulo_de_la_imagen'] ?></h2>
 							       <p><i class="fa fa-search-plus" aria-hidden="true" style="color: #fff;"></i><br><?php  $value['titulo_de_la_imagen'] ?></p>
 							    </div>
 							    </a>
