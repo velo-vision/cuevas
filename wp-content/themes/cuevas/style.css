@@ -70,7 +70,7 @@
 }
 
 .borde-cuevas{
-    border:1px solid #000;
+    border:1px solid #5c719f;
     margin-bottom: 20px;
     margin-top: -15px;
 }
@@ -108,10 +108,18 @@ nav{
 }
 
 .menu-transparent li {
-    line-height: 53px;
-    text-transform: uppercase;
-    padding: 0 10px;
-    margin-top: -38px;
+   line-height: 53px;
+   text-transform: uppercase;
+   padding: 0 5px;
+   margin-top: -38px;
+}
+
+.menu-transparent a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /*font-weight: 600;*/
+    color: #fff;
+    text-align: right;
 }
 
 .collapsible{
@@ -1935,6 +1943,10 @@ element.style {
 /****************************MEDIAS JRG*****************************/
 
 @media only screen and (min-width:768px) and (max-width:992px){
+    .borde-cuevas{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
 	.img-cuevas {
     height: 267px;
 }
@@ -1960,6 +1972,11 @@ element.style {
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+    .borde-cuevas{
+    border:1px solid #5c719f;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
 	.menu-var-divice{
 		width: 55%;
 	}
@@ -2030,5 +2047,15 @@ nav {
 @media only screen and (min-width:992px) and (max-width:1100px){
 	.img-cuevas {
     height: 265px;
+}
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px){
+.menu-transparent li {
+        padding: 0 0px;
+}
+
+nav ul a {
+        padding: 0 8px;
 }
 }
