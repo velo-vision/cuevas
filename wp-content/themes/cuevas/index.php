@@ -70,6 +70,7 @@ get_header();
 					<!--menu geo -->
 					<!-- <div class="col s12 m12 l4 nopadding">
 					  <nav  class="w3-sidenav w3-black w3-card-2">
+<<<<<<< HEAD
 					   
 					      <?php/*
 					            global $post;
@@ -84,6 +85,19 @@ get_header();
 					              </a>
 					               <?php  $geo ++; ?>
 					          <?php  endforeach; */ ?>
+=======
+					    <!-- geotecnica -->
+					      <?php
+									$texto =  get_field("estud", 160); ?>
+									<?php $geomenu =1; ?>
+									<?php foreach ($texto as $key => $value) {?>
+										<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
+											<div class="col s12 l12 text-slider-derec">
+												<?php echo $value['contenidoo'] ?>
+											</div>
+										</a>
+								<?php $geomenu ++; } ?>
+>>>>>>> jorge
 					   </nav>
 					</div> -->
 					<!-- geoternica -->
