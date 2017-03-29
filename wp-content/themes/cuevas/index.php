@@ -43,8 +43,8 @@ get_header();
 				</div>
 				<div class="col s12 m12 l12 nopadding">
 					<!--slider geo-->
-					<!-- div class="col s12 m12 l8 nopadding">
-								<?php /*$Geoslider =  get_field("estud", 160); ?>
+					 <div class="col s12 m12 l8 nopadding">
+								<?php $Geoslider =  get_field("estud",244); ?>
 								<?php $ctn =1;?>
 								<?php foreach ($Geoslider as $key => $value){ ?>
 									 <?php ($ctn>1)?$style='display: none;':''; ?>
@@ -64,42 +64,25 @@ get_header();
 										</div>
 									</div>
 									<?php $ctn ++; ?>
-								<?php } */?>
-					</div> -->
+								<?php } ?>
+					</div>
 					<!--slider geo-->
 					<!--menu geo -->
-					<!-- <div class="col s12 m12 l4 nopadding">
+					<div class="col s12 m12 l4 nopadding">
 					  <nav  class="w3-sidenav w3-black w3-card-2">
-<<<<<<< HEAD
-					   
-					      <?php/*
-					            global $post;
-					            $args = array( "category" => 8 );
-					            $myposts = get_posts( $args );*/ ?>
-					            <?php /* $geo =1;
-					            foreach( $myposts as $post ) : setup_postdata($post); ?>
-					                <a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geo?>')">
-					                  <div class="col s12 l12 text-slider-derec">
-					                  	<p><?php the_title(); ?></p>
-					                </div>
-					              </a>
-					               <?php  $geo ++; ?>
-					          <?php  endforeach; */ ?>
-=======
 					    <!-- geotecnica -->
 					      <?php
-									$texto =  get_field("estud", 160); ?>
+									$texto =  get_field("estud", 244); ?>
 									<?php $geomenu =1; ?>
 									<?php foreach ($texto as $key => $value) {?>
 										<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
 											<div class="col s12 l12 text-slider-derec">
-												<?php echo $value['contenidoo'] ?>
+												<p><?php echo $value['contenidoo'] ?></p>
 											</div>
 										</a>
 								<?php $geomenu ++; } ?>
->>>>>>> jorge
 					   </nav>
-					</div> -->
+					</div>
 					<!-- geoternica -->
 				</div>
 			</div>
@@ -143,7 +126,6 @@ get_header();
 					</div>
 					<div class="col s12 m12 l8 nopadding">
 					<!-- slider construccion -->
-
 					<?php
 						global $post;
 						$args = array( "category" => 6 );
@@ -152,8 +134,8 @@ get_header();
 						<?php foreach( $myposts as $post ) : setup_postdata($post); ?>
 							<?php $rows = get_field('galeriasPrueba', $post);?>
 								<?php	foreach ($rows as $key => $galeriaprueba) {?>
-								<?php ($cont2>1)?$style='display: none;':'';?>
-									<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="<?php echo $style; ?>">
+								<?php ($cont2>1)?$style2='display: none;':'';?>
+									<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="<?php echo $style2; ?>">
 									    <div class="slider slider-fon">
 										    <ul class="slides size-slider-dispo">
 										    <!---->
