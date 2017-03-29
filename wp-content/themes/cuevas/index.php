@@ -68,7 +68,7 @@ get_header();
 					</div>
 					<!--slider geo-->
 					<!--menu geo -->
-					<div class="col s12 m12 l4 nopadding">
+					<div class="col s12 m12 l4 nopadding over">
 					  <nav  class="w3-sidenav w3-black w3-card-2">
 					    <!-- geotecnica -->
 					      <?php

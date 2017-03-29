@@ -42,6 +42,11 @@
     color: #000;
 }
 
+.over{
+	overflow-y: scroll;
+    height: 400px;
+}
+
 .bold{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 25px;
@@ -106,8 +111,16 @@ nav{
 .menu-transparent li {
     line-height: 53px;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 5px;
     margin-top: -38px;
+}
+
+.menu-transparent a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	/*font-weight: 600;*/
+	color: #fff;
+	text-align: right;
 }
 
 .collapsible{
@@ -2021,5 +2034,14 @@ nav {
 @media only screen and (min-width:992px) and (max-width:1100px){
 	.img-cuevas {
     height: 265px;
+}
+}
+@media only screen and (min-width:992px) and (max-width:1200px){
+.menu-transparent li {
+		padding: 0 0px;
+}
+
+nav ul a {
+		padding: 0 8px;
 }
 }
