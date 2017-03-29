@@ -43,8 +43,8 @@ get_header();
 				</div>
 				<div class="col s12 m12 l12 nopadding">
 					<!--slider geo-->
-					<div class="col s12 m12 l8 nopadding">
-								<?php $Geoslider =  get_field("estud", 160); ?>
+					<!-- div class="col s12 m12 l8 nopadding">
+								<?php /*$Geoslider =  get_field("estud", 160); ?>
 								<?php $ctn =1;?>
 								<?php foreach ($Geoslider as $key => $value){ ?>
 									 <?php ($ctn>1)?$style='display: none;':''; ?>
@@ -64,46 +64,18 @@ get_header();
 										</div>
 									</div>
 									<?php $ctn ++; ?>
-								<?php } ?>
-					</div>
+								<?php } */?>
+					</div> -->
 					<!--slider geo-->
-					<!-- slider construccion -->
-            <?php
-                global $post;
-                $args = array( "category" => 6 );
-                $myposts = get_posts( $args );?>
-                <?php $cont2 =1; ?>
-                <?php foreach( $myposts as $post ) : setup_postdata($post); ?>
-                    <?php $rows = get_field('galeriasPrueba', $post);?>
-                        <?php    foreach ($rows as $key => $galeriaprueba) {?>
-                        <?php ($cont2>1)?$style='display: none;':'';?>
-                            <div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="<?php echo $style; ?>">
-                                <div class="slider slider-fon">
-                                    <ul class="slides size-slider-dispo">
-                                    <!---->
-                                <?php foreach ($galeriaprueba['galleriaprueba'] as $key => $gale) {?>
-                                    <li>
-                                        <img src="<?php echo $gale['url'] ?>">
-                                        <div class="caption left-align">
-                                          <h5><?php echo $gale['title'] ?></h5>
-                                        </div>
-                                    </li>
-                                <?php } ?>
-                                    </ul>
-                                  </div>
-                            </div>
-                                <?php $cont2 ++; } ?>
-                        <?php  endforeach; ?>
-                    <!-- slider construccion -->
 					<!--menu geo -->
-					<div class="col s12 m12 l4 nopadding">
+					<!-- <div class="col s12 m12 l4 nopadding">
 					  <nav  class="w3-sidenav w3-black w3-card-2">
-					    <!-- geotecnica -->
-					      <?php
+					   
+					      <?php/*
 					            global $post;
 					            $args = array( "category" => 8 );
-					            $myposts = get_posts( $args );?>
-					            <?php $geo =1;
+					            $myposts = get_posts( $args );*/ ?>
+					            <?php /* $geo =1;
 					            foreach( $myposts as $post ) : setup_postdata($post); ?>
 					                <a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geo?>')">
 					                  <div class="col s12 l12 text-slider-derec">
@@ -111,9 +83,9 @@ get_header();
 					                </div>
 					              </a>
 					               <?php  $geo ++; ?>
-					          <?php  endforeach; ?>
+					          <?php  endforeach; */ ?>
 					   </nav>
-					</div>
+					</div> -->
 					<!-- geoternica -->
 				</div>
 			</div>
@@ -223,9 +195,9 @@ get_header();
 		<div class="row nomargin nopadding">
 			<div class="col s12 m12 l12 fondo-referencias nopadding">
 				<div class="col s12 m6 offset-m3 l4 offset-l4 margen-r center-align">
-				    <?php $post = get_post(51); //Donde 200 será la id del post
+				    <?php $post = get_post(51);
 						$title = $post->post_title;
-						$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
+						$contenido = $post->post_content;
 	  				  ?>
 					<p class="title-seis"><?php echo  $title; ?></p>
 				</div>
