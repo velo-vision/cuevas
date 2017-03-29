@@ -2,12 +2,6 @@
 //template name: index
 get_header(); 
 
-
-echo "code";
-print_r(get_field("galeriasPrueba", 170));
-echo "cide";
-
-
 ?>
 <!--contenido 1 inicio-->
 			<div class="row margin-contenido">
@@ -236,40 +230,6 @@ echo "cide";
 		</div>
 	</section>
 	<!--contenido 4 sliders construccion-->
-------------------
-
-<?php
-
-$rows = get_field('galeriasPrueba',170 ); // get all the rows
-$first_row = $rows[0]; // get the first row
-$first_row_image = $first_row['galeriasPrueba' ]; // get the sub field value 
-
-// Note
-// $first_row_image = 123 (image ID)
-
-$image = wp_get_attachment_image_src( $first_row_image, 'full' );
-// url = $image[0];
-// width = $image[1];
-// height = $image[2];
-?>
-<img src="<?php echo $image[0]; ?>" />
-
-
-
-	<?php if( have_rows('galeriasPrueba', 170) ): ?>
-
-    <ul>
-
-    <?php while( have_rows('galeriasPrueba', 170) ): the_row(); ?>
-
-        <li><?php echo the_sub_field('title'); ?></li>
-
-    <?php endwhile; ?>
-
-    </ul>
-
-<?php endif; ?>
--------------------
 	<section id="construccion">
 		<div class="row nomargin">
 			<div class="col s12 m12 l12 fondo-azul center-align nopadding">
@@ -307,64 +267,31 @@ $image = wp_get_attachment_image_src( $first_row_image, 'full' );
 					</div>
 					<div class="col s12 m12 l8 nopadding">
 					<!-- slider construccion -->
-							<?php
-								  global $post;
-								  $args = array( "category" => 6 );
-								  $myposts = get_posts( $args );?>
-								  <?php $cont2 =1; 
-								  foreach( $myposts as $post ) : setup_postdata($post); ?>
-								  	<?php if (1 == $cont2){?>
-								  			<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity">
-											    <div class="slider slider-fon">
-												    <ul class="slides size-slider-dispo">
-												    <!---->
-												    <?php 
-									    		$entrada = $post;										    		
-									    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
-									  	 		<?php foreach ($slidersc as $key => $value) {?>
-											  	 		<li>
-													        <img src="<?php echo $value['imagenCimientos'] ?>">
-													        <div class="caption left-align">
-													          <h5><?php echo $value['titulo'] ?></h5>
-													        </div>
-													    </li>												  		
-												 	<?php } ?>
-												  <!----><?php 
-												  $sliderscx =  get_field("slideropcional", $entrada); ?>											  	 	
-											  	 		<?php foreach ($sliderscx as $key => $value) {?>
-												  	 		<li>
-														        <!-- <img src="<?php // echo $value['submenu'] ?>"> -->
-														        <div class="caption left-align">
-														         <img src="<?php echo $value['slider2'] ?>">
-														           <h5><?php echo $value['tituloimagen'] ?></h5>
-														        </div>
-														   		</li>										  		
-													 	<?php }?>
-
-												    </ul>
-											  	</div>
-											 </div>
-								  		<?php }else{ ?>
-								  				<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="display: none;">
-												    <div class="slider slider-fon">
-													    <ul class="slides size-slider-dispo">
-													    <!---->
-													    <?php 
-											    		$entrada = $post;										    		
-											    		$slidersc =  get_field("sliderconstruccion", $entrada); ?>											  	 	
-											  	 		<?php foreach ($slidersc as $key => $value) {?>
-												  	 		<li>
-														        <img src="<?php echo $value['imagenCimientos'] ?>">
-														        <div class="caption left-align">
-														          <h5><?php echo $value['titulo'] ?></h5>
-														        </div>
-														    </li>												  		
-													 	<?php } ?>
-													  <!---->												      
-													    </ul>
-												  	</div>
-												 </div>
-								  		<?php } $cont2 ++; ?>
+					<?php
+						global $post;
+						$args = array( "category" => 6 );
+						$myposts = get_posts( $args );?>
+						<?php $cont2 =1; ?>
+						<?php foreach( $myposts as $post ) : setup_postdata($post); ?>
+							<?php $rows = get_field('galeriasPrueba', $post);?>
+								<?php	foreach ($rows as $key => $galeriaprueba) {?>
+								<?php ($cont2>1)?$style='display: none;':'';?>
+									<div id="con<?php echo $cont2; ?>" class="w3-container construccion w3-animate-opacity" style="<?php echo $style; ?>">
+									    <div class="slider slider-fon">
+										    <ul class="slides size-slider-dispo">
+										    <!---->
+										<?php foreach ($galeriaprueba['galleriaprueba'] as $key => $gale) {?>
+											<li>
+										        <img src="<?php echo $gale['url'] ?>">
+										        <div class="caption left-align">
+										          <h5><?php echo $gale['title'] ?></h5>
+										        </div>
+										    </li>
+										<?php } ?>
+											</ul>
+									  	</div>
+									</div>
+										<?php $cont2 ++; } ?>
 								<?php  endforeach; ?>
 					<!-- slider construccion -->
 					</div>
