@@ -17,11 +17,11 @@
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
    </head>
    <body>
-
+<div id="wptime-plugin-preloader"></div>
      <?php $Slider =  get_field("fondo", 158); ?>
          <?php foreach ($Slider as $key => $value) {?>
            <?php echo $value['imagen'] ?>
-   <section class="fondo-home" id="inicio" style="background-image: url('<?php echo $value['obrascuevas'] ?>'); !important ;">
+   <section class="fondo-home" id="inicio" style="background-image: url('<?php echo $value['obrascuevas'] ?>') !important ;">
          <?php } ?>
 
     <div class="row" >

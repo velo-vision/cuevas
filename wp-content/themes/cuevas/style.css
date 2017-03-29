@@ -6,7 +6,11 @@
 .nopadding{
 	padding: 0px !important;
 }
-
+/**/
+.over{
+    overflow-y: scroll;
+   height: 400px;
+}
 /*selecotres slider*/
 .slider .indicators .indicator-item.active{
     background-color: #113073;
@@ -71,7 +75,7 @@
 }
 
 .borde-cuevas{
-    border:1px solid #000;
+    border:1px solid #5c719f;
     margin-bottom: 20px;
     margin-top: -15px;
 }
@@ -109,10 +113,18 @@ nav{
 }
 
 .menu-transparent li {
-    line-height: 53px;
-    text-transform: uppercase;
-    padding: 0 5px;
-    margin-top: -38px;
+   line-height: 53px;
+   text-transform: uppercase;
+   padding: 0 5px;
+   margin-top: -38px;
+}
+
+.menu-transparent a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /*font-weight: 600;*/
+    color: #fff;
+    text-align: right;
 }
 
 .menu-transparent a {
@@ -330,6 +342,11 @@ ul li{
 /*fin*/
 
 /*seccion 3 geotecnica*/
+.active-geo {
+    background-color:#112f73 !important;
+    color :#fff;
+}
+
 .fondo-gris{
 	background-color: #f4f4f4;
 }
@@ -1939,6 +1956,10 @@ element.style {
 /****************************MEDIAS JRG*****************************/
 
 @media only screen and (min-width:768px) and (max-width:992px){
+    .borde-cuevas{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
 	.img-cuevas {
     height: 267px;
 }
@@ -1964,6 +1985,11 @@ element.style {
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+    .borde-cuevas{
+    border:1px solid #5c719f;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
 	.menu-var-divice{
 		width: 55%;
 	}
@@ -2036,12 +2062,13 @@ nav {
     height: 265px;
 }
 }
+
 @media only screen and (min-width:992px) and (max-width:1200px){
 .menu-transparent li {
-		padding: 0 0px;
+        padding: 0 0px;
 }
 
 nav ul a {
-		padding: 0 8px;
+        padding: 0 8px;
 }
 }

@@ -149,3 +149,8 @@
 	// 	});
 
 	// });
+/**menu activo geoternica**/
+	$('#menu2 a div').on('click', function(){
+    $('a div.active-geo').removeClass('active-geo');
+    $(this).addClass('active-geo');
+});
