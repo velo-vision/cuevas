@@ -68,15 +68,15 @@ get_header();
 					</div>
 					<!--slider geo-->
 					<!--menu geo -->
-					<div class="col s12 m12 l4 nopadding">
-					  <nav  class="w3-sidenav w3-black w3-card-2">
+					<div  class="col s12 m12 l4 nopadding">
+					  <nav id="menu2" class="w3-sidenav w3-black w3-card-2">
 					    <!-- geotecnica -->
 					      <?php
 									$texto =  get_field("estud", 244); ?>
 									<?php $geomenu =1; ?>
 									<?php foreach ($texto as $key => $value) {?>
-										<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
-											<div class="col s12 l12 text-slider-derec">
+										<a href="javascript:void(0)" class="tablink active-geo" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
+											<div class="col s12 l12  text-slider-derec">
 												<p><?php echo $value['contenidoo'] ?></p>
 											</div>
 										</a>
@@ -97,8 +97,8 @@ get_header();
 				</div>
 				<div class="col s12 l12 nopadding">
 					<div id="content-l" class="col s12 m12 l4 content sin-disc nopadding scroll-slider">
-						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider">
-							<ul class="collapsible" data-collapsible="accordion">
+						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider" >
+							<ul class="collapsible" data-collapsible="accordion" id="#menu3">
 								<!-- contruccion -->
 								<?php
 								  global $post;
@@ -107,15 +107,15 @@ get_header();
 								  <?php $cont =1;
 								  foreach( $myposts as $post ) : setup_postdata($post); ?>
 										<li>
-											<div class="collapsible-header texto-sliderizquierdo-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+											<div class="collapsible-header texto-sliderizquierdo-title "><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 											<div class="collapsible-body construccion-menu">
 									    		<?php
 									    		$entrada = $post;
 									    		$TituloMenu =  get_field("galeriasPrueba", $entrada); ?>
 										  	 		<?php foreach ($TituloMenu as $key => $value) {?>
-										  	 		<a href="javascript:void(0)" class="cnt nopadding" onclick="est(event, 'con<?php echo $cont ?>')">
+										  	 		<a href="javascript:void(0)" class="cnt nopadding activo-contruccion" onclick="est(event, 'con<?php echo $cont ?>')">
 												  		<p class="content-slider-iz"><?php echo $value['titulogalerias'] ?></p>
-												  		</a>
+												  	</a>
 												 <?php  $cont ++; } ?>
 											</div>
 										</li>

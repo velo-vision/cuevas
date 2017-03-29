@@ -6,7 +6,31 @@
 .nopadding{
 	padding: 0px !important;
 }
+/*menu activo*/
+.activos {
+    text-decoration: underline !important;
+    background-color: red !important;
+    color :red !important;
+}
+nav {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
 
+.activo-contruccion {
+    /*text-decoration: underline !important;
+    background-color: red !important;*/
+    color :red !important;
+}
+nav {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/**/
 /*selecotres slider*/
 .slider .indicators .indicator-item.active{
     background-color: #113073;
@@ -316,6 +340,11 @@ ul li{
 /*fin*/
 
 /*seccion 3 geotecnica*/
+.active-geo {
+    background-color:#112f73 !important;
+    color :#fff;
+}
+
 .fondo-gris{
 	background-color: #f4f4f4;
 }
