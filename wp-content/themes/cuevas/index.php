@@ -43,7 +43,7 @@ get_header();
 				</div>
 				<div class="col s12 m12 l12 nopadding">
 					<!--slider geo-->
-					 <div class="col s12 m8 l10 nopadding">
+					 <div class="col s12 m7 l9 nopadding">
 							<?php $Geoslider =  get_field("estud",244); ?>
 							<?php $ctn =1;?>
 							<?php foreach ($Geoslider as $key => $value){ ?>
@@ -68,7 +68,7 @@ get_header();
 					</div>
 					<!--slider geo-->
 					<!--menu geo -->
-					<div  class="col s12 m4 l2 nopadding over">
+					<div  class="col s12 m5 l3 nopadding over">
 					  <nav id="menu2" class="w3-sidenav w3-black w3-card-2">
 					    <!-- geotecnica -->
 					      <?php
@@ -96,7 +96,7 @@ get_header();
 					<p class="title-cuatro">CONSTRUCCIÓN</p>
 				</div>
 				<div class="col s12 l12 nopadding">
-					<div id="content-l" class="col s12 m4 l2 content sin-disc nopadding scroll-slider">
+					<div id="content-l" class="col s12 m4 l3 content sin-disc nopadding scroll-slider">
 						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider" >
 							<ul class="collapsible" data-collapsible="accordion" id="#menu3">
 								<!-- contruccion -->
@@ -124,7 +124,7 @@ get_header();
 							</ul>
 						</nav>
 					</div>
-					<div class="col s12 m8 l10 nopadding">
+					<div class="col s12 m8 l9 nopadding">
 					<!-- slider construccion -->
 					<?php
 						global $post;

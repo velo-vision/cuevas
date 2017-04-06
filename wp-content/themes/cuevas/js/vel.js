@@ -27,7 +27,7 @@
 			      }, 1000);
 			      return false;
 			    }
-			  }
+			  }gt
 			});
 
 	 /*menu*/

@@ -449,12 +449,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     width: 100%;
 }
 .collapsible-header i {
-    width: 1rem;
-    line-height: 4rem;
+    width: 0rem;
+    line-height: 1rem;
     display: block;
     float: right;
     text-align: center;
-    margin-right: 1rem;
+    margin-right: 14px;
 }
 .fondo-azul{
 	background-color: #113073;
@@ -476,7 +476,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 
 .texto-sliderizquierdo-title{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 	color: #113073;
 	text-transform: uppercase;
@@ -1391,18 +1391,18 @@ nav .brand-logo {
 
 /***********seccion 4 construccion*****/
 .texto-sliderizquierdo-title{
-    font-size: 8px;
+    font-size: 11px;
     text-align: left;
     padding-right: 0px;
     padding-left: 4px;
 }
 
 .texto-sliderizquierdo-title:hover{
-    font-size: 8px;
+    font-size: 11px;
     color: #bc153a;
     text-align: left;
     padding-right: 0px;
-    padding-left: 4px;
+    padding-left: 10px;
 }
 
 .content-slider-iz{
@@ -1429,19 +1429,34 @@ nav .brand-logo {
     width: 100%;
     height: 30%;
 }
+
+.collapsible-header {
+    padding: 42px 10px;
+    border-bottom: 0px solid #fff;
+}
+.collapsible-header i {
+    line-height: 1rem;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 40px !important;
+}
+.scroll-slider {
+    height: 400px !important;
+}
 /*******seccion 3 geo*****/
 .margin-geo{
     margin-top: -17px;
 }
 
 .text-slider-derec{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #b1b1b1;
-    text-align: center;
-    border: solid 1px #e3e3e3;
+   font-size: 10px;
+   text-align: center;
+   height: 40PX;
+}
+.over {
+    overflow-y: hidden;
+    height: 280px;
+    margin-top: 5%;
 }
 
 /*sliders**/
@@ -1715,8 +1730,25 @@ element.style {
     text-align: right;
     border: solid 1px #e3e3e3;
     padding-left: 0px !important;
+    height: 72px;
 }
-
+.over {
+    height: 500px;
+}
+.slider {
+    position: relative;
+    height: 500px !important;
+    width: 100%;
+}
+.slider .slides {
+    background-color: #9e9e9e;
+    margin: 0;
+    height: 500px !important;
+}
+.slider .indicators {
+    left: 250px;
+    bottom: 32px;
+}
 /********seccion 2 nuestra empresa****/
 .title-dos{
     font-family: 'Montserrat', sans-serif;
