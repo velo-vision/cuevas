@@ -71,7 +71,7 @@
         <div class="row nomargin">
           <div class="col s12 m12 l12">
             <div class="col l2">
-              <img class="hide-on-small-only hide-on-med-only logo-principal" src="<?php bloginfo('template_url'); ?>/images/home/logo02.png">
+              <img class="hide-on-small-only hide-on-med-only logo-principal2" src="<?php bloginfo('template_url'); ?>/images/home/logo02.png">
             </div>
             <div class="col l10">
               <div class="col s12 l12 hide-on-small-only hide-on-med-only">
