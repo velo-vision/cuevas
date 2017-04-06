@@ -485,7 +485,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 
 .texto-sliderizquierdo-title:hover{
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     color: #bc153a;
     text-transform: uppercase;
@@ -1915,11 +1915,11 @@ element.style {
 }
 
 .texto-sliderizquierdo-title{
-    font-size: 17px;
+    font-size: 13px;
 }
 
 .texto-sliderizquierdo-title:hover{
-    font-size: 17px;
+    font-size: 13px;
 }
 
 /*****inicio***/
@@ -1936,6 +1936,10 @@ element.style {
     background-color: transparent;
     color: transparent;
     margin-top: 20px;
+}
+.scroll-slider {
+    /* overflow-y: scroll !important; */
+    height: 500px !important;
 }
 
 }
