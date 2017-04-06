@@ -70,7 +70,7 @@
 }
 
 .borde-cuevas{
-    border:1px solid #000;
+    border:1px solid #5c719f;
     margin-bottom: 20px;
     margin-top: -15px;
 }
@@ -107,10 +107,19 @@ nav{
     background-color: transparent;
 }
 
-.menu-transparent li{
-  line-height: 5px;
-	text-transform: uppercase;
-	padding: 0 10px;
+.menu-transparent li {
+   line-height: 53px;
+   text-transform: uppercase;
+   padding: 0 5px;
+   margin-top: -38px;
+}
+
+.menu-transparent a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /*font-weight: 600;*/
+    color: #fff;
+    text-align: right;
 }
 
 .collapsible{
@@ -128,7 +137,7 @@ nav{
 }
 .menu-var-divice{
 	background-color: rgba(17,48,155, .7);
-	width: 88%;
+	width: 45%;
 	border: solid 1px #fff;
 }
 
@@ -1504,7 +1513,7 @@ nav .brand-logo {
 }
 
 .margin-contenido{
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .subtitle{
@@ -1955,6 +1964,20 @@ element.style {
 /****************************MEDIAS JRG*****************************/
 
 @media only screen and (min-width:768px) and (max-width:992px){
+    .borde-cuevas{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+	.img-cuevas {
+    height: 267px;
+}
+	nav {
+		background: #113073;
+}
+
+.fondo-home {
+	height: 800px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1963,13 +1986,37 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+    .borde-cuevas{
+    border:1px solid #5c719f;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+	.menu-var-divice{
+		width: 55%;
+	}
+
+.img-cuevas {
+	 height: 211px;
+}
+
+nav {
+	background: #113073;
+}
+
+.fondo-home {
+	height: 600px;
+}
+
+.subtitle {
+    font-size: 50px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1978,13 +2025,26 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 
 }
 
 @media only screen and (min-width:200px) and (max-width:600px){
+	.menu-var-divice{
+		width: 65%;
+	}
+	.img-cuevas {
+    height: 206px;
+}
+
+	nav {
+    background: #113073;
+}
+	.fondo-home {
+    height: 360px;
+}
 
 .side-nav a {
     padding: 0 16px;
@@ -1993,11 +2053,33 @@ element.style {
 }
 .side-nav a:hover {
     padding: 0 16px;
-    color: #e0d7d7;
+    color: #c3b8b8;
     text-transform: uppercase ;
 }
 .slider .slides {
     height: 212px !important;
 }
 
+}
+
+@media only screen and (min-width:1100px) and (max-width:1400px){
+	.img-cuevas {
+    height: 330px;
+}
+}
+
+@media only screen and (min-width:992px) and (max-width:1100px){
+	.img-cuevas {
+    height: 265px;
+}
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px){
+.menu-transparent li {
+        padding: 0 0px;
+}
+
+nav ul a {
+        padding: 0 8px;
+}
 }

@@ -20,7 +20,7 @@ get_header();
 								$contenido = $post->post_content; //Guardamos en $contenido el contenido del post
 			  				  ?>
 					  <P class="bold"><?php echo  $title; ?></P>
-					  <div class="col l4 offset-l4 m4 offset-m4 s6 offset-s3 borde-cuevas"></div>
+					  <div class="col l4 offset-l4 m4 offset-m4 s4 offset-s4 borde-cuevas"></div>
 						<div class="col s12 m12 l12 nopadding">
 								<?php if (has_post_thumbnail()) {
 					            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );

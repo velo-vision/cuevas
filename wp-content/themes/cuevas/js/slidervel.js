@@ -1,49 +1,49 @@
-	$(document).ready(function(){
-		divC = document.getElementById("uno");
-		divC.style.display = "";
+	// $(document).ready(function(){
+	// 	divC = document.getElementById("uno");
+	// 	divC.style.display = "";
 
-		divT = document.getElementById("dos");
-		divT.style.display = "none";
+	// 	divT = document.getElementById("dos");
+	// 	divT.style.display = "none";
 
-		divT = document.getElementById("tres");
-		divT.style.display = "none";
+	// 	divT = document.getElementById("tres");
+	// 	divT.style.display = "none";
 
-		$( window ).resize(function() {
-			var sel = document.getElementById("select");
-			if (sel.value=="slider1"){
-				divC = document.getElementById("uno");
-				divC.style.display = "inline";
+	// 	$( window ).resize(function() {
+	// 		var sel = document.getElementById("select");
+	// 		if (sel.value=="slider1"){
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display = "inline";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "none";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "none";
 
-			}if (sel.value=="slider2"){
+	// 		}if (sel.value=="slider2"){
 
-				divC = document.getElementById("uno");
-				divC.style.display="none";
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display="none";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "inline";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "inline";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "none";
 
-			}if (sel.value=="slider3"){
-				divC = document.getElementById("uno");
-				divC.style.display="none";
+	// 		}if (sel.value=="slider3"){
+	// 			divC = document.getElementById("uno");
+	// 			divC.style.display="none";
 
-				divT = document.getElementById("dos");
-				divT.style.display = "none";
+	// 			divT = document.getElementById("dos");
+	// 			divT.style.display = "none";
 
-				divT = document.getElementById("tres");
-				divT.style.display = "inline";
-			}		
-		});
+	// 			divT = document.getElementById("tres");
+	// 			divT.style.display = "inline";
+	// 		}		
+	// 	});
 
-	});
+	// });
 	/*
 //slider del select 1
 $('.bxslider').bxSlider({
@@ -60,41 +60,41 @@ $('.bxslider').bxSlider({
 
 */
 	/*select*/
-	function civil(sel){
-		if (sel.value=="slider1"){
-			divC = document.getElementById("uno");
-			divC.style.display = "inline";
-			$().show();
-			$().hide();
-			divT = document.getElementById("dos");
-			divT.style.display = "none";
+	// function civil(sel){
+	// 	if (sel.value=="slider1"){
+	// 		divC = document.getElementById("uno");
+	// 		divC.style.display = "inline";
+	// 		$().show();
+	// 		$().hide();
+	// 		divT = document.getElementById("dos");
+	// 		divT.style.display = "none";
 
-			divT = document.getElementById("tres");
-			divT.style.display = "none";
+	// 		divT = document.getElementById("tres");
+	// 		divT.style.display = "none";
 
 
-		}if (sel.value=="slider2"){
+	// 	}if (sel.value=="slider2"){
 
-			divC = document.getElementById("uno");
-			divC.style.display="none";
+	// 		divC = document.getElementById("uno");
+	// 		divC.style.display="none";
 
-			divT = document.getElementById("dos");
-			divT.style.display = "inline";
+	// 		divT = document.getElementById("dos");
+	// 		divT.style.display = "inline";
 
-			divT = document.getElementById("tres");
-			divT.style.display = "none";
+	// 		divT = document.getElementById("tres");
+	// 		divT.style.display = "none";
 
-		}if (sel.value=="slider3"){
-			divC = document.getElementById("uno");
-			divC.style.display="none";
+	// 	}if (sel.value=="slider3"){
+	// 		divC = document.getElementById("uno");
+	// 		divC.style.display="none";
 
-			divT = document.getElementById("dos");
-			divT.style.display = "none";
+	// 		divT = document.getElementById("dos");
+	// 		divT.style.display = "none";
 
-			divT = document.getElementById("tres");
-			divT.style.display = "inline";
-		}
-	}
+	// 		divT = document.getElementById("tres");
+	// 		divT.style.display = "inline";
+	// 	}
+	// }
 
 
 	
