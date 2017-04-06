@@ -140,7 +140,7 @@ nav{
 }
 
 .collapsible-header{
-    border-bottom:21px solid #fff;
+    border-bottom:30px solid #fff;
 }
 
 .menu-var{
@@ -186,10 +186,14 @@ nav{
 }
 
 .logo-principal{
+    width: 300px;
+    margin: 10% 0 0 16%;
+}
+
+.logo-principal2{
     width: 185px;
     margin: 8px 0 0 11px;
 }
-
 .collapse i{
     line-height: 2px;
 }
@@ -367,14 +371,15 @@ ul li{
 
 .text-slider-derec{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	color: #fff;
 	background-color: #b1b1b1;
 	text-align: right;
 	border: solid 1px #e3e3e3;
-    line-height: 18px;
-    height: 57px;
+    line-height: normal;
+    padding: 1px 7px !important;
+    height: 100px;
 }
 
 .text-slider-derec:hover{
@@ -393,7 +398,7 @@ ul li{
     width: 100%;
     background-color: rgba(255,255,255,.7);
     padding-left: 6%;
-		text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .w3-container{
@@ -414,6 +419,22 @@ ul li{
     from{opacity:0}
     to{opacity:1}
 }
+.slider {
+    position: relative;
+    height: 700px !important;
+    width: 100%;
+}
+
+.slider .slides {
+    background-color: #9e9e9e;
+    margin: 0;
+    height: 700px !important;
+}
+.over {
+    overflow-y: scroll;
+    height: 700px;
+}
+
 /*slider-device*/
 .slider-fon{}
 /**/
@@ -426,9 +447,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 .collapsible-header {
     display: block;
     cursor: pointer;
-    min-height: 3rem;
-    line-height: 3rem;
-    padding: 15px 3em 0px 1em;
+    min-height: 0rem;
+    line-height: normal;
+    padding: 10px;
     background-color: #fff;
 }
 
@@ -441,12 +462,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     width: 100%;
 }
 .collapsible-header i {
-    width: 1rem;
+    width: 0rem;
     line-height: 3rem;
     display: block;
     float: right;
     text-align: center;
-    margin-right: 1rem;
+    margin-right: 14px;
 }
 .fondo-azul{
 	background-color: #113073;
@@ -468,7 +489,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 
 .texto-sliderizquierdo-title{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	color: #113073;
 	text-transform: uppercase;
@@ -477,7 +498,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 
 .texto-sliderizquierdo-title:hover{
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: #bc153a;
     text-transform: uppercase;
@@ -519,7 +540,7 @@ nav ul li {
 
 .scroll-slider{
   /* overflow-y: scroll !important;*/
-   height: 400px !important;
+   height: 700px !important;
 }
 /**/
 
@@ -1383,18 +1404,18 @@ nav .brand-logo {
 
 /***********seccion 4 construccion*****/
 .texto-sliderizquierdo-title{
-    font-size: 8px;
+    font-size: 11px;
     text-align: left;
     padding-right: 0px;
     padding-left: 4px;
 }
 
 .texto-sliderizquierdo-title:hover{
-    font-size: 8px;
+    font-size: 11px;
     color: #bc153a;
     text-align: left;
     padding-right: 0px;
-    padding-left: 4px;
+    padding-left: 10px;
 }
 
 .content-slider-iz{
@@ -1421,19 +1442,34 @@ nav .brand-logo {
     width: 100%;
     height: 30%;
 }
+
+.collapsible-header {
+    padding: 42px 10px;
+    border-bottom: 0px solid #fff;
+}
+.collapsible-header i {
+    line-height: 1rem;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 40px !important;
+}
+.scroll-slider {
+    height: 400px !important;
+}
 /*******seccion 3 geo*****/
 .margin-geo{
     margin-top: -17px;
 }
 
 .text-slider-derec{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #b1b1b1;
-    text-align: center;
-    border: solid 1px #e3e3e3;
+   font-size: 10px;
+   text-align: center;
+   height: 40PX;
+}
+.over {
+    overflow-y: hidden;
+    height: 280px;
+    margin-top: 5%;
 }
 
 /*sliders**/
@@ -1707,8 +1743,25 @@ element.style {
     text-align: right;
     border: solid 1px #e3e3e3;
     padding-left: 0px !important;
+    height: 72px;
 }
-
+.over {
+    height: 500px;
+}
+.slider {
+    position: relative;
+    height: 500px !important;
+    width: 100%;
+}
+.slider .slides {
+    background-color: #9e9e9e;
+    margin: 0;
+    height: 500px !important;
+}
+.slider .indicators {
+    left: 250px;
+    bottom: 32px;
+}
 /********seccion 2 nuestra empresa****/
 .title-dos{
     font-family: 'Montserrat', sans-serif;
@@ -1751,11 +1804,6 @@ element.style {
     color: #242237;
     font-weight: bold;
     margin: 10px 0;
-}
-
-.texto-sliderizquierdo-title{
-    font-size: 8px;
-    padding: 0 9% 0 5px;
 }
 
 .texto-sliderizquierdo-title:hover{
@@ -1830,6 +1878,10 @@ element.style {
 }
 /***apple ipad***/
 @media only screen and (min-width:768px) and (max-width:1024px){
+.texto-sliderizquierdo-title{
+    font-size: 8px;
+    padding: 21px 8% 10px 5px;
+}
 /***secion 2****/
 .bold {
     font-size: 14px;
@@ -1875,11 +1927,11 @@ element.style {
 }
 
 .texto-sliderizquierdo-title{
-    font-size: 17px;
+    font-size: 13px;
 }
 
 .texto-sliderizquierdo-title:hover{
-    font-size: 17px;
+    font-size: 13px;
 }
 
 /*****inicio***/
@@ -1896,6 +1948,10 @@ element.style {
     background-color: transparent;
     color: transparent;
     margin-top: 20px;
+}
+.scroll-slider {
+    /* overflow-y: scroll !important; */
+    height: 500px !important;
 }
 
 }
@@ -1985,6 +2041,10 @@ element.style {
 }
 
 @media only screen and (min-width:600px) and (max-width:768px){
+	.texto-sliderizquierdo-title{
+	    font-size: 8px;
+	    padding: 13px 12% 17px 5px;
+	}
     .borde-cuevas{
     border:1px solid #5c719f;
     margin-bottom: 15px;
@@ -2047,6 +2107,9 @@ nav {
     padding: 0 16px;
     color: #c3b8b8;
     text-transform: uppercase ;
+}
+.slider .slides {
+    height: 212px !important;
 }
 
 }

@@ -43,44 +43,44 @@ get_header();
 				</div>
 				<div class="col s12 m12 l12 nopadding">
 					<!--slider geo-->
-					 <div class="col s12 m12 l8 nopadding">
-								<?php $Geoslider =  get_field("estud",244); ?>
-								<?php $ctn =1;?>
-								<?php foreach ($Geoslider as $key => $value){ ?>
-									 <?php ($ctn>1)?$style='display: none;':''; ?>
-									<div id="Fade<?php echo $ctn; ?>" class="w3-container geotecnica w3-animate-opacity" style="<?php echo $style; ?>">
-										<div class="slider slider-fon">
-											<ul class="slides size-slider-dispo">
-												<?php foreach ($value['estudios'] as $key => $gale) {?>
-													<li>
-														<img src="<?php echo $gale['url'] ?>"/>
-														<div class="caption left-align">
-															<h5><?php echo $gale['title'] ?></h5>
-														</div>
-													</li>
-												<?php }
-												?>
-											</ul>
-										</div>
+					 <div class="col s12 m7 l9 nopadding">
+							<?php $Geoslider =  get_field("estud",244); ?>
+							<?php $ctn =1;?>
+							<?php foreach ($Geoslider as $key => $value){ ?>
+								 <?php ($ctn>1)?$style='display: none;':''; ?>
+								<div id="Fade<?php echo $ctn; ?>" class="w3-container geotecnica w3-animate-opacity" style="<?php echo $style; ?>">
+									<div class="slider slider-fon">
+										<ul class="slides size-slider-dispo">
+											<?php foreach ($value['estudios'] as $key => $gale) {?>
+												<li>
+													<img src="<?php echo $gale['url'] ?>"/>
+													<div class="caption left-align">
+														<h5><?php echo $gale['title'] ?></h5>
+													</div>
+												</li>
+											<?php }
+											?>
+										</ul>
 									</div>
-									<?php $ctn ++; ?>
-								<?php } ?>
+								</div>
+								<?php $ctn ++; ?>
+							<?php } ?>
 					</div>
 					<!--slider geo-->
 					<!--menu geo -->
-					<div class="col s12 m12 l4 nopadding over">
-					  <nav  class="w3-sidenav w3-black w3-card-2">
+					<div  class="col s12 m5 l3 nopadding over">
+					  <nav id="menu2" class="w3-sidenav w3-black w3-card-2">
 					    <!-- geotecnica -->
 					      <?php
-									$texto =  get_field("estud", 244); ?>
-									<?php $geomenu =1; ?>
-									<?php foreach ($texto as $key => $value) {?>
-										<a href="javascript:void(0)" class="tablink" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
-											<div class="col s12 l12 text-slider-derec">
-												<p><?php echo $value['contenidoo'] ?></p>
-											</div>
-										</a>
-								<?php $geomenu ++; } ?>
+								$texto =  get_field("estud", 244); ?>
+								<?php $geomenu =1; ?>
+								<?php foreach ($texto as $key => $value) {?>
+									<a href="javascript:void(0)" class="tablink active-geo" onclick="openLink(event, 'Fade<?php echo $geomenu; ?>')">
+										<div class="col s12 l12  text-slider-derec">
+											<p><?php echo $value['contenidoo'] ?></p>
+										</div>
+									</a>
+							<?php $geomenu ++; } ?>
 					   </nav>
 					</div>
 					<!-- geoternica -->
@@ -96,9 +96,10 @@ get_header();
 					<p class="title-cuatro">CONSTRUCCIÓN</p>
 				</div>
 				<div class="col s12 l12 nopadding">
-					<div id="content-l" class="col s12 m12 l4 content sin-disc nopadding scroll-slider">
-						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider">
-							<ul class="collapsible" data-collapsible="accordion">
+					<div id="content-l" class="col s12 m4 l3 content sin-disc nopadding scroll-slider">
+						<nav class="w3-sidenav w3-black w3-card-2 margen-menu-slider" >
+							<ul class="collapsible" data-collapsible="accordion" id="#menu3">
+
 								<!-- contruccion -->
 								<?php
 								  global $post;
@@ -124,7 +125,7 @@ get_header();
 							</ul>
 						</nav>
 					</div>
-					<div class="col s12 m12 l8 nopadding">
+					<div class="col s12 m8 l9 nopadding">
 					<!-- slider construccion -->
 					<?php
 						global $post;
