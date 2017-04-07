@@ -12,7 +12,7 @@
 .slider_model .slider_model_box img {
   display: block;
   width: 100%;
-  height: 600px;
+  height: 900px;
 }
 /* line 17, ../sass/oka_slider_model.scss */
 .slider_model .slider_model_box > * + * {
