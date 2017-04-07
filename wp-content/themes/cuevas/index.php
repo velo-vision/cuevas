@@ -176,7 +176,9 @@ get_header();
 								<?php $Slider =  get_field("civil", 128); ?>
 								  	<?php foreach ($Slider as $key => $value) {?>
 								  		<?php echo $value['imagen'] ?>
-								  		<img src="<?php echo $value['imagenslider'] ?>"/>
+								  		<img src="<?php  echo $value['imagenslider'] ?>"/>
+								  		<!-- <img src="<?php  // echo $value['imagenslider'] ?>" class="img_civil_bg" /> -->
+								  		<!-- <li class="img_civil_bg" style="background: url('<?php //echo $value['imagenslider'] ?>');"></li> -->
 									<?php } ?>
 								<!-- Slider -->
 							</div>

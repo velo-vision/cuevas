@@ -554,6 +554,15 @@ nav ul li {
 /**/
 
 /*seccion 5 obra civil*/
+/*.img_civil_bg{
+    background-size: 170% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    height: 600px;
+    list-style: none;
+    background-attachment: scroll !important;
+}*/
+
 .fondo-blanco{
 	background-color: #fff;
 }
@@ -1305,7 +1314,7 @@ nav .brand-logo {
 .slider_model .slider_model_box img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 250px;
 }
 /*
 .bx-wrapper .bx-prev {
@@ -1727,13 +1736,16 @@ element.style {
 .slider_model .slider_model_box img{
     display: block;
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 .slider_model .model_ctrl_tools a{
-    top: 27%;
+    top: 40%;
 }
 
+.slider_model .slider_bottom_box {
+    display: none;
+}
 /*******seccion 4 contruccion****/
 .texto-sliderizquierdo-title{
     font-family: 'Montserrat', sans-serif;
@@ -2114,9 +2126,16 @@ nav {
 }
 
 @media only screen and (min-width:200px) and (max-width:600px){
+
 	.mCustomScrollBox {
 	    background: #fff;
 	}
+
+.slider_model .slider_bottom_box {
+    display: none;
+
+}
+
 	.menu-var-divice{
 		width: 65%;
 	}
@@ -2170,4 +2189,8 @@ nav {
 nav ul a {
         padding: 0 8px;
 }
+.slider_model .slider_model_box img {
+    height: 600px;
+}
+
 }
