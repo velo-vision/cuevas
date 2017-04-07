@@ -149,7 +149,7 @@ nav{
 }
 
 .collapsible-header{
-    border-bottom:30px solid #fff;
+    border-bottom:0px solid #fff;
 }
 
 .menu-var{
@@ -458,7 +458,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     cursor: pointer;
     min-height: 0rem;
     line-height: normal;
-    padding: 50px 30px;
+    padding: 65px 30px;
     background-color: #fff;
 }
 
@@ -522,6 +522,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 	text-transform: uppercase;
 	background-color: #efefef;
 	text-align: left;
+    line-height: normal;
 }
 
 .content-slider-iz:hover{
@@ -1588,6 +1589,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 
 @media only screen and (min-width:600px) and (max-width:992px){
 /******/
+.slider .slides li .caption {
+    font-size: 16px;
+}
 .size-logo-menu-uno {
     width: 150px;
 }
@@ -1785,7 +1789,7 @@ element.style {
 }
 .slider .indicators {
     left: 250px;
-    bottom: 32px;
+    bottom: 35px;
 }
 /********seccion 2 nuestra empresa****/
 .title-dos{
@@ -1831,17 +1835,14 @@ element.style {
     margin: 10px 0;
 }
 
-.texto-sliderizquierdo-title:hover{
-    font-size: 8px;
-}
 
 .content-slider-iz{
-    font-size: 14px;
+    font-size: 10px;
 		line-height: 17px;
 }
 
 .content-slider-iz:hover{
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /****footer***/
@@ -2046,7 +2047,7 @@ element.style {
     margin: 0;
     height: 500px !important;
 }
-    .borde-cuevas{
+.borde-cuevas{
     margin-bottom: 15px;
     margin-top: 0px;
 }
@@ -2082,10 +2083,13 @@ element.style {
 	.mCustomScrollBox {
 	    background: #fff;
 	}
-	.texto-sliderizquierdo-title{
-	    font-size: 8px;
-	    padding: 62px 12% 17px 5px;
-	}
+.texto-sliderizquierdo-title{
+    font-size: 10px;
+    padding: 60px 12% 17px 5px;
+}
+.texto-sliderizquierdo-title:hover{
+    font-size: 10px;
+}
 
     .borde-cuevas{
     border:1px solid #5c719f;
@@ -2101,7 +2105,7 @@ element.style {
 }
 
 nav {
-	background: #113073;
+	background: #fff;
 }
 
 .fondo-home {
@@ -2146,8 +2150,8 @@ nav {
     height: 206px;
 }
 
-	nav {
-    background: #113073;
+nav {
+    background: #fff;
 }
 	.fondo-home {
     height: 360px;
@@ -2171,7 +2175,7 @@ nav {
 
 @media only screen and (min-width:1400px) and (max-width:1660px){
 	.collapsible-header {
-	    padding: 48px 30px;
+	    padding: 63px 30px;
 	}
 }
 
@@ -2183,9 +2187,12 @@ nav {
 .texto-sliderizquierdo-title {
     font-size: 12px;
 }
+.texto-sliderizquierdo-title:hover {
+    font-size: 12px;
+}
 
 .collapsible-header {
-    padding: 48px 30px;
+    padding: 63px 30px;
 }
 }
 
@@ -2198,7 +2205,7 @@ nav {
 }
 
 .collapsible-header {
-    padding: 47px 30px;
+    padding: 63px 30px;
 }
 .scroll-slider {
     /* overflow-y: scroll !important; */
